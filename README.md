@@ -28,7 +28,7 @@ This project demonstrates a comprehensive application of knowledge and methodolo
 │   └── Dataset Links.txt        # Dataset saved on Google Drive
 ├── HTML Presentation/           # used for presentation
 ├── README.md
-├── Report.pdf                   # Final Project Report
+├── Final Report.pdf                   # Final Project Report
 └── Slides                       # Screenshot of the HTML presentation slides
 
 ```
