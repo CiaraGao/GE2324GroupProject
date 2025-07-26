@@ -2,7 +2,9 @@
 
 
 **Course**: GE2324 – The Art and Science of Data
+
 **Group**: T04-I  
+
 **Semester**: 2025 Summer
 
 ## 📋 Project Overview
