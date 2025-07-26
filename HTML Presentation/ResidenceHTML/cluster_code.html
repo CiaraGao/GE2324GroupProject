@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hong Kong District Clustering Analysis</title>
+    <style>
+        /* Previous styles remain unchanged */
+        
+        /* Code Display Styles */
+        .code-section {
+            width: 100%;
+            margin: 30px auto;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .code-header {
+            background-color: #2d3748;
+            color: white;
+            padding: 10px 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .code-content {
+            padding: 15px;
+            margin: 0;
+            overflow-x: auto;
+            background-color: #f5f5f5;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85em;
+            line-height: 1.5;
+            color: #333;
+            border-left: 4px solid #ff1278;
+        }
+        .code-content pre {
+            margin: 0;
+        }
+        .keyword { color: #d63384; }        /* Python keywords */
+        .function { color: #6f42c1; }      /* Functions */
+        .string { color: #20c997; }        /* Strings */
+        .comment { color: #6c757d; }       /* Comments */
+        .import { color: #fd7e14; }        /* Import statements */
+        .method { color: #0d6efd; }        /* Methods */
+        .param { color: #0dcaf0; }         /* Parameters */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Previous content remains unchanged -->
+        
+        <div class="code-section">
+            <div class="code-header">
+                <span>clustering_analysis.py</span>
+                <span>K-Means Clustering Implementation</span>
+            </div>
+            <div class="code-content">
+                <pre><code><span class="keyword">from</span> <span class="import">sklearn.preprocessing</span> <span class="keyword">import</span> <span class="function">MinMaxScaler</span>
+<span class="keyword">from</span> <span class="import">sklearn.cluster</span> <span class="keyword">import</span> <span class="function">KMeans</span>
+<span class="keyword">import</span> <span class="import">matplotlib.pyplot</span> <span class="keyword">as</span> <span class="import">plt</span>
+<span class="keyword">import</span> <span class="import">seaborn</span> <span class="keyword">as</span> <span class="import">sns</span>
+
+<span class="comment"># Choose the columns to normalize</span>
+<span class="param">columns_to_normalize</span> = [<span class="string">'Population Density'</span>, 
+                        <span class="string">'Average Elderly Percentage (%)'</span>, 
+                        <span class="string">'Average Median Income'</span>]
+
+<span class="comment"># Normalization</span>
+<span class="param">scaler</span> = <span class="function">MinMaxScaler</span>()
+<span class="param">combined_data</span>[<span class="param">columns_to_normalize</span>] = <span class="param">scaler</span>.<span class="method">fit_transform</span>(<span class="param">combined_data</span>[<span class="param">columns_to_normalize</span>])
+
+<span class="comment"># Use K-Means clustering</span>
+<span class="param">kmeans</span> = <span class="function">KMeans</span>(<span class="param">n_clusters</span>=<span class="number">3</span>, <span class="param">random_state</span>=<span class="number">42</span>)
+<span class="param">combined_data</span>[<span class="string">'Cluster'</span>] = <span class="param">kmeans</span>.<span class="method">fit_predict</span>(<span class="param">combined_data</span>[<span class="param">columns_to_normalize</span>])
+
+<span class="comment"># Print clustering result</span>
+<span class="param">combined_data</span></code></pre>
+            </div>
+        </div>
+
+        <!-- Interpretation section remains unchanged -->
+    </div>
+</body>
+</html>

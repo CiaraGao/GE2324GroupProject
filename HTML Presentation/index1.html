@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>GE2324 Group Project: HK Bus Network Visualization</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css" />
+    <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/white.css" />
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet" />
+
+    <!-- MathJax for LaTeX equation rendering -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        /* 首页容器 */
+        .page-first {
+            position: relative;
+            height: 100vh;
+            /* 第一页占满整个视口高度 */
+            overflow: hidden;
+        }
+
+        .bg-top,
+        .bg-bottom {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            left: 0;
+            z-index: -1;
+        }
+
+        .bg-top {
+            top: 0;
+        }
+
+        .bg-bottom {
+            bottom: 0;
+        }
+
+        .content-first {
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+
+
+        img {
+            max-width: 90%;
+            height: auto;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .formula {
+            font-size: 0.6em;
+            margin: 20px;
+        }
+
+        .cover h2,
+        .cover h3,
+        .cover p {
+            font-family: 'EB Garamond', serif;
+            color: #000000;
+            line-height: 1.2;
+        }
+    </style>
+
+</head>
+
+
+
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+
+
+
+
+
+            <!-- 1: Title -->
+            <section class=" center cover">
+                <h2>Public Transport Accessibility and Residential Clustering in Hong Kong</h2>
+                <img src="svg/bg1.svg" alt="顶部背景" class="bg-top">
+                <img src="svg/bg2.svg" alt="底部背景" class="bg-bottom">
+                <p>GE2324 T04 - I Project</p>
+
+            </section>
+
+
+            <!-- <section>
+                <h2>Interactive Road Network (Plotly)</h2>
+                <iframe src="road_network_plotly.html" width="100%" height="600" style="border:none;"></iframe>
+            </section> -->
+
+            <section>
+                <h3 style="text-align: center;">Computational Methods Overview</h3>
+                <table border="1" cellpadding="8" cellspacing="0"
+                    style="border-collapse: collapse; width: 80%; margin: auto; font-family: Arial, sans-serif; font-size: 0.6em;">
+                    <thead style="background-color: #f2f2f2;">
+                        <tr>
+                            <th>Method</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Visualization</td>
+                            <td>Present spatial and demographic patterns clearly</td>
+                        </tr>
+                        <tr>
+                            <td>Network Analysis</td>
+                            <td>Model and evaluate transport connectivity</td>
+                        </tr>
+                        <tr>
+                            <td>Frequency Analysis</td>
+                            <td>Identify commonly used commuting paths</td>
+                        </tr>
+                        <tr>
+                            <td>Correlation Analysis</td>
+                            <td>Explore relationships between transport and socioeconomic factors</td>
+                        </tr>
+                        <tr>
+                            <td>Clustering & Normalization</td>
+                            <td>Group districts based on population and accessibility features</td>
+                        </tr>
+                        <tr>
+                            <td>Recommendation Modeling</td>
+                            <td>Assess similarity and equity among different regions</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+
+            <section>
+                <p>START:</p>
+                <div style="display: flex; justify-content: center;">
+                    <img src="svg\map1.svg" alt="map"
+                        style="width: 90%; max-width: 900px; height: auto; border: 1px solid #ccc;">
+                </div>
+
+            </section>
+
+            <section>
+                <p>Public Transport</p>
+                <div style="display: flex; justify-content: center;">
+                    <img src="svg\map2.svg" alt="map2"
+                        style="width: 90%; max-width: 900px; height: auto; border: 1px solid #ccc;">
+                </div>
+
+            </section>
+
+            <section>
+                <p>Residence</p>
+                <div style="display: flex; justify-content: center;">
+                    <img src="svg\map1.svg" alt="map"
+                        style="width: 90%; max-width: 900px; height: auto; border: 1px solid #ccc;">
+                </div>
+
+            </section>
+
+            <!-- 1: Methodology + Flow -->
+            <section>
+                <h2>Working Flow</h2>
+                <div style="display: flex; justify-content: center;">
+                    <img src="svg/flow.svg" alt="flow0 "
+                        style="width: 90%; max-width: 900px; height: auto; border: 1px solid #ccc;">
+                </div>
+            </section>
+
+
+            <section>
+                <h3>Data Source & Pre-process</h3>
+                <div style="display: flex; justify-content: center;">
+                    <img src="svg/data0.svg" alt="data0 "
+                        style="width: 90%; max-width: 900px; height: auto; border: 1px solid #ccc;">
+                </div>
+
+            </section>
+
+
+            <section>
+                <h3>Data Source & Pre-processing</h3>
+                <iframe src="ResidenceHTML\data.html" width="100%" height="600" style="border:none;"></iframe>
+
+            </section>
+
+
+            <section>
+                <h3>Data Source & Pre-processing</h3>
+                <iframe src="ResidenceHTML\predata.html" width="100%" height="600" style="border:none;"></iframe>
+
+            </section>
+
+
+
+
+            <section>
+                <h3>Network & Frequency Analysis</h3>
+                <div style="display: flex; justify-content: center;">
+                    <img src="svg/yiqing0.svg" alt="yiqing0 "
+                        style="width: 90%; max-width: 900px; height: auto; border: 1px solid #ccc;">
+                </div>
+
+            </section>
+
+
+
+
+            <!-- 2. YiQing -->
+
+
+            <!-- figure -->
+            <section>
+                <p>Public Transport Network Construction & Analysis</p>
+                <div style="display: flex; justify-content: center;">
+                    <img src="svg\yiqing1.svg" alt="yiqing1 "
+                        style="width: 90%; max-width: 900px; height: auto; border: 1px solid #ccc;">
+                </div>
+
+            </section>
+
+
+
+
+            <section>
+                <p>Bus Stop Network Construction & Analysis</p>
+                <div style="display: flex; justify-content: center;">
+                    <img src="svg\yiqing4.svg" alt="yiqing4 "
+                        style="width: 90%; max-width: 900px; height: auto; border: 1px solid #ccc;">
+                </div>
+
+            </section>
+
+
+
+
+
+            <section>
+                <p>Public Transport Network Construction & Analysis</p>
+                <div style="display: flex; justify-content: center;">
+                    <img src="svg\yiqing1.svg" alt="yiqing1 "
+                        style="width: 90%; max-width: 900px; height: auto; border: 1px solid #ccc;">
+                </div>
+
+            </section>
+
+
+
+            <section>
+                <p>MTR Station Network Construction & Analysis</p>
+                <div style="display: flex; justify-content: center;">
+                    <img src="svg\yiqing2.svg" alt="yiqing2 "
+                        style="width: 90%; max-width: 900px; height: auto; border: 1px solid #ccc;">
+                </div>
+
+            </section>
+
+
+
+            <!-- explain -->
+            <section>
+                <h3>Co-occurrence Matrix</h3>
+
+                <p style="font-size: 0.5em; text-align: center;">
+                    $$
+                    \mathrm{Freq}_{i,j} =
+                    \dfrac{\text{Number of baskets where both station } i \text{ and } j \text{
+                    appear}}{\text{Total_number of baskets}}
+                    = \dfrac{C_{i,j}}{N}
+                    $$
+                </p>
+                <iframe src="ResidenceHTML\frequent.html" width="100%" height="600" style="border:none;"></iframe>
+
+            </section>
+
+
+
+
+
+
+            <!-- figure -->
+            <section>
+
+                <h4 style="text-align: center;">High-Frequency Co-occurrence Heatmap</h4>
+                <div style="display: flex; justify-content: center;">
+                    <img src="svg/frequency.svg" alt="frequency "
+                        style="width: 90%; max-width: 900px; height: auto; border: 1px solid #ccc;">
+                </div>
+                <p style="font-size: 0.45em; text-align: justify;">
+                    <strong>Figure:</strong> The heatmap shows the normalized pairwise co-occurrence matrix (ranging
+                    from 0 to 1)
+                    across all stations. Darker pink squares indicate stronger associations between stations during peak
+                    hours. Only
+                    the lower triangle is displayed to reduce redundancy, helping highlight clusters of frequently
+                    co-traveled
+                    stations.
+                </p>
+            </section>
+
+
+
+            <!-- Optional: Frequent Rules -->
+            <section>
+                <h3>Frequent Itemset Rules</h3>
+                <p style="font-size: 0.6em;">We used <code>fpgrowth</code> and <code>association_rules</code> to find
+                    meaningful patterns:</p>
+                <p style="font-size: 0.6em;">
+                    For example, we might discover rules like:<br>
+                    <code>{1001, 1003} ⇒ {5027}</code> with confidence > 0.8
+                </p>
+                <p style="font-size: 0.6em;">Interest of a rule is calculated as:</p>
+                <p style="font-size: 0.6em;">$$
+                    \text{Interest} = \left| \text{Confidence} - \text{Support}_{\text{consequent}} \right|
+                    $$</p>
+            </section>
+
+            <!-- Frequency END -->
+
+
+            <section>
+                <h3>Clustering & Correlation</h3>
+                <div style="display: flex; justify-content: center;">
+                    <img src="svg/yongxi0.svg" alt="yongxi"
+                        style="width: 90%; max-width: 900px; height: auto; border: 1px solid #ccc;">
+                </div>
+
+            </section>
+
+
+
+
+
+
+
+            <!-- 3. Clustering -->
+
+            <!-- Yongxi's part-->
+
+            <section>
+                <h2>Population Clustering and Correlation</h2>
+            </section>
+
+            <section>
+                <h3 style="font-size: 1.5em; margin-bottom: 10px;">3 Key Indicators in Our Clustering Analysis</h3>
+                <ul style="list-style-type: none; padding: 0; margin: 0;">
+                    <li style="margin-bottom: 8px;">
+                        <strong>1. Population Density:</strong> Reflecting the concentration of residents in each
+                        district.
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <strong>2. Ratio of Elderly Population:</strong> Highlights the elderly population in different
+                        areas.
+                    </li>
+                    <li style="margin-bottom: 8px;">
+                        <strong>3. Median Household Income:</strong> Reflects the socioeconomic status of each area.
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Population Density Analysis</h3>
+                <img src="svg\pie_chart.svg" alt="pie "
+                    style="width: 90%; max-width: 900px; height: auto; border: 1px solid #ccc;">
+            </section>
+
+            <!-- <section>  上面改PDF
+                <div style="display: flex; justify-content: center;">
+                    <iframe src="ResidenceHTML/population_piechart.html"
+                        style="border:none; width:100vw; height:85vh; min-height:600px; display: block; margin: auto;">
+                    </iframe>
+                </div>
+            </section> -->
+
+
+
+            <section>
+                <h3>Elderly Population Analysis</h3>
+                <div style=" display: flex; gap: 10px;">
+                    <iframe src="ResidenceHTML/elderly_dual_axis_chart.html" width="100%" height="600"
+                        style="border:none;"></iframe>
+                </div>
+            </section>
+
+            <section>
+                <h3>Median Household Income Analysis</h3>
+                <div style="display: flex; gap: 10px;">
+                    <iframe src="ResidenceHTML/hk_income_analysis.html" width="100%" height="600"
+                        style="border:none;"></iframe>
+                </div>
+            </section>
+
+            <section>
+                <h3>Clustering Method: K-Means</h3>
+                <div style="display: flex; gap: 10px;">
+                    <iframe src="ResidenceHTML/cluster_code.html" width="100%" height="600"
+                        style="border:none;"></iframe>
+                </div>
+            </section>
+
+            <section>
+                <h3>Clustering Result</h3>
+                <div style="display: flex; gap: 10px;">
+                    <iframe src="ResidenceHTML/cluster_table.html" width="100%" height="600"
+                        style="border:none;"></iframe>
+                </div>
+            </section>
+
+            <section>
+                <h3>3D Visualization</h3>
+                <iframe src="ResidenceHTML/3d_clustering.html"
+                    style="border:none; width:100%; height:70vh; min-height:500px;""></iframe>
+                        </section>
+
+            <!-- Zerun's part -->
+
+
+
+
+        </section>
+
+        <section>
+            <div style=" display: flex; gap: 10px;">
+                    <iframe src="ResidenceHTML/zerun1.html" width="100%" height="600" style="border:none;"></iframe>
+        </div>
+        </section>
+
+
+
+        <section>
+            <iframe src="ResidenceHTML\correlation.html" width="100%" height="600" style="border:none;"></iframe>
+            <div class="formula">
+                Pearson (r):
+                \( r = \frac{\sum \left[(X - M_X)(Y - M_Y)\right]}{\sqrt{(SS_X)(SS_Y)}} \) ; Spearman (ρ):
+                \( \rho = 1 - \frac{6 \sum D^2}{n(n^2 - 1)} \)
+            </div>
+
+        </section>
+
+
+
+
+        <section>
+            <p style="font-size: 0.6em;">Correlation Between Hong Kong's Transportation Facilities and Socioeconomic
+                Factors</p>
+            <div style="display: flex; justify-content: center;">
+                <img src="svg/zerun2.svg" alt="MTR Accessibility Map"
+                    style="border: none; width: 100%; height: 80vh; min-height: 600px; object-fit: contain;">
+            </div>
+        </section>
+
+        <section>
+            <div style="display: flex; gap: 10px;">
+                <iframe src="ResidenceHTML/zerun5.html" width="100%" height="600" style="border:none;"></iframe>
+            </div>
+        </section>
+
+
+
+
+        <!--Clustering END-->
+
+        <section>
+            <h3>Similarity & Recommendation</h3>
+            <div style=" display: flex; justify-content: center;">
+                <img src="svg/zichong0.svg" alt="zi "
+                    style="width: 90%; max-width: 900px; height: auto; border: 1px solid #ccc;">
+            </div>
+        </section>
+
+
+
+
+
+
+        <!-- Zichong  -->
+
+        <section>
+            <h3>Similarity: Common situation?</h3>
+            <div>
+                <p style="font-size: 0.6em;">If two are in similar situation?</p>
+                <p style="font-size: 0.6em;">- Use the method of recommendation system</p>
+                <p style="font-size: 0.6em;">- Data converted to scores between 1-10</p>
+                <p style="font-size: 0.6em;">- Using scitlearn -- More stops, higher scores!</p>
+                <iframe src="svg/district_scores.svg" width="100%" height="400" style="border:none;"></iframe>
+                <!-- utility matrix -->
+
+            </div>
+        </section>
+
+
+
+
+        <section>
+            <h3>Similarity: Common situation?</h3>
+            <div>
+                <p style="font-size: 0.6em;">If two are in similar situation?</p>
+                <p style="font-size: 0.6em;">- Use the method of recommendation system - Data converted to scores
+                    between 1-10 - Using scitlearn -- More stops, higher scores!</p>
+                <iframe src="svg/district_scores.svg" width="100%" height="400" style="border:none;"></iframe>
+                <!-- utility matrix -->
+
+            </div>
+        </section>
+        <section>
+            <h3>Similarity: Common situation?</h3>
+            <div>
+                <p style="font-size: 0.6em;">Similarity Matrix</p>
+                <iframe src="svg/similarity_matrix.svg" width="100%" height="600" style="border:none;"></iframe>
+            </div>
+        </section>
+
+        <section>
+            <h3>Similarity: Common situation?</h3>
+            <div>
+                <p style="font-size: 0.6em;">- different from previous clustering</p>
+                <p style="font-size: 0.6em;">-Districts in Kowloon & N.T. are
+                    similar, on HK island are different</p>
+                <!-- 九龙各区很类似，新界也是，但香港岛很不一样 -->
+        </section>
+
+        <section>
+            <!-- <h3>Similarity: Common situation?</h3>
+            <div>
+                <p style="font-size: 0.6em;">- different from previous clustering -Districts in Kowloon & N.T. are
+                    similar, on HK island are different</p> -->
+            <!-- 九龙各区很类似，新界也是，但香港岛很不一样 -->
+            <div style="display: flex; justify-content: center;">
+                <img src="svg/111.svg" alt="SH"
+                    style="border: none; width: 100%; height: 70vh; min-height: 600px; object-fit: contain;">
+            </div>
+        </section>
+        <section>
+            <h3>Results and findings</h3>
+            <div>
+                <p style="font-size: 0.6em;">A comprehensive study on the public transport & fairness</p>
+                <!-- 从低between高close方差得出的结论： -->
+                <p style="font-size: 0.6em;">- Not rely on traffic centers, but less convenient for remote areas</p>
+                <p style="font-size: 0.6em;">- Population density matters, not income</p>
+                <!-- 大部分人口得到服务 still manages to let most of the population get the service-->
+                <p style="font-size: 0.6em;">- Districts in the same area tend to be similar in terms of equity</p>
+            </div>
+        </section>
+
+
+        <section>
+            <h3>Limitations</h3>
+            <div>
+                <p>Reliance on district-level socioeconomic data</p>
+                <!-- 以区为单位，不够精细not fine-grain enough -->
+                <p>Did not consider personal travel habit</p>
+                <p>Only two types of traffic</p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Slide : Group Roles -->
+
+        <section class="center cover">
+            <h2>Group Members</h2>
+            <table
+                style="margin: 0 auto; border-collapse: collapse; font-family: 'EB Garamond', serif; color: #000000;">
+                <thead>
+                    <tr>
+                        <th style="border: 1px solid #ccc; padding: 8px;">Member</th>
+                        <th style="border: 1px solid #ccc; padding: 8px;">SID</th>
+                        <th style="border: 1px solid #ccc; padding: 8px;">Contribution</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 7px;">Qimiao GAO</td>
+                        <td style="border: 1px solid #ccc; padding: 7px;">58520905</td>
+                        <td style="border: 1px solid #ccc; padding: 7px;">100%</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 7px;">Yongxi QI</td>
+                        <td style="border: 1px solid #ccc; padding: 7px;">58521557</td>
+                        <td style="border: 1px solid #ccc; padding: 7px;">100%</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 7px;">Zerun ZHANG</td>
+                        <td style="border: 1px solid #ccc; padding: 7px;">58223216</td>
+                        <td style="border: 1px solid #ccc; padding: 7px;">100%</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 7px;">Zichong DENG</td>
+                        <td style="border: 1px solid #ccc; padding: 7px;">58520837</td>
+                        <td style="border: 1px solid #ccc; padding: 7px;">100%</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 7px;">Yiqing YANG</td>
+                        <td style="border: 1px solid #ccc; padding: 7px;">58517962</td>
+                        <td style="border: 1px solid #ccc; padding: 7px;">100%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+        <!-- Slide 15: Thank You -->
+        <section class="center">
+            <h2>Thank You!</h2>
+            <p>We welcome any questions.</p>
+        </section>
+
+    </div>
+    </div>
+
+    <!-- JS Scripts -->
+    <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/chart-map.js"></script>
+    <script>
+        Reveal.initialize();
+    </script>
+</body>
+
+</html>

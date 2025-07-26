@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>香港各区聚类分析报告</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        .cluster-0 { background-color: #ffb6c1; }
+        .cluster-1 { background-color: #c1ffc1; }
+        .cluster-2 { background-color: #c1e1ff; }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+  
+    <table>
+        <thead>
+            <tr>
+                <th>District</th> <th>Bus Stop Density</th> <th>Population Density</th> <th>Elderly Percentage</th> <th>Median Income</th> <th>MTR No.</th> <th>Cluster</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="cluster-0"><td>Wong Tai Sin</td><td>16.02</td><td>43,480</td><td>23.14</td><td>$25,600</td><td>4</td><td>0</td></tr> <tr class="cluster-0"><td>Kowloon City</td><td>25.47</td><td>40,310</td><td>20.04</td><td>$31,100</td><td>7</td><td>0</td></tr> <tr class="cluster-0"><td>Yau Tsim Mong</td><td>30.19</td><td>42,400</td><td>18.28</td><td>$29,000</td><td>10</td><td>0</td></tr> <tr class="cluster-0"><td>Sham Shui Po</td><td>25.85</td><td>46,220</td><td>20.22</td><td>$24,500</td><td>6</td><td>0</td></tr> <tr class="cluster-0"><td>Kwun Tong</td><td>25.98</td><td>59,340</td><td>22.04</td><td>$24,200</td><td>6</td><td>0</td></tr> <tr class="cluster-0"><td>Eastern</td><td>12.34</td><td>28,810</td><td>23.68</td><td>$32,500</td><td>7</td><td>0</td></tr> <tr class="cluster-2"><td>Wan Chai</td><td>19.70</td><td>14,970</td><td>21.44</td><td>$40,800</td><td>4</td><td>2</td></tr> <tr class="cluster-2"><td>Central and Western</td><td>18.96</td><td>17,820</td><td>19.64</td><td>$42,400</td><td>7</td><td>2</td></tr> <tr class="cluster-1"><td>Sha Tin</td><td>4.10</td><td>10,020</td><td>20.84</td><td>$31,000</td><td>14</td><td>1</td></tr> <tr class="cluster-1"><td>Southern</td><td>7.05</td><td>6,620</td><td>21.34</td><td>$36,000</td><td>4</td><td>1</td></tr> <tr class="cluster-1"><td>Tsuen Wan</td><td>2.96</td><td>5,020</td><td>19.06</td><td>$34,200</td><td>3</td><td>1</td></tr> <tr class="cluster-0"><td>Kwai Tsing</td><td>9.47</td><td>21,040</td><td>22.10</td><td>$25,500</td><td>4</td><td>0</td></tr> <tr class="cluster-1"><td>Tuen Mun</td><td>2.77</td><td>5,930</td><td>19.84</td><td>$26,200</td><td>2</td><td>1</td></tr> <tr class="cluster-1"><td>Yuen Long</td><td>2.98</td><td>4,750</td><td>16.64</td><td>$30,000</td><td>4</td><td>1</td></tr> <tr class="cluster-1"><td>North</td><td>1.73</td><td>2,460</td><td>18.70</td><td>$25,800</td><td>4</td><td>1</td></tr> <tr class="cluster-1"><td>Tai Po</td><td>1.91</td><td>2,310</td><td>19.62</td><td>$31,300</td><td>2</td><td>1</td></tr> <tr class="cluster-2"><td>Sai Kung</td><td>1.87</td><td>3,800</td><td>17.10</td><td>$41,200</td><td>4</td><td>2</td></tr> <tr class="cluster-1"><td>Islands</td><td>1.43</td><td>1,000</td><td>15.78</td><td>$31,000</td><td>5</td><td>1</td></tr>
+        </tbody>
+    </table>
+   
+</body>
+</html>

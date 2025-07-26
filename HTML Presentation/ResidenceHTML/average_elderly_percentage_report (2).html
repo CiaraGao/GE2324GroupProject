@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Average Elderly Percentage Report</title>
+    <style>
+        body {
+            padding: 30px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+        .report-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(11, 218, 184, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #0BDAB8;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #E6FFFA;
+            padding-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+        caption {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #888;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="report-container">
+        <h1>Average Elderly Percentage by District</h1>
+        <style type="text/css">
+#T_c4f2c th {
+  background-color: #0BDAB8;
+  color: white;
+}
+#T_c4f2c_row0_col0, #T_c4f2c_row1_col0, #T_c4f2c_row2_col0, #T_c4f2c_row3_col0, #T_c4f2c_row4_col0, #T_c4f2c_row5_col0, #T_c4f2c_row6_col0, #T_c4f2c_row7_col0, #T_c4f2c_row8_col0, #T_c4f2c_row9_col0, #T_c4f2c_row10_col0, #T_c4f2c_row11_col0, #T_c4f2c_row12_col0, #T_c4f2c_row13_col0, #T_c4f2c_row14_col0, #T_c4f2c_row15_col0, #T_c4f2c_row16_col0, #T_c4f2c_row17_col0 {
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_c4f2c_row0_col1, #T_c4f2c_row11_col1, #T_c4f2c_row13_col1 {
+  background-color: #ffc3cc;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_c4f2c_row1_col1 {
+  background-color: #ffb9c4;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_c4f2c_row2_col1 {
+  background-color: #ffccd4;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_c4f2c_row3_col1, #T_c4f2c_row9_col1 {
+  background-color: #ffc2cb;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_c4f2c_row4_col1, #T_c4f2c_row5_col1 {
+  background-color: #ffbdc7;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_c4f2c_row6_col1 {
+  background-color: #ffc5cf;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_c4f2c_row7_col1 {
+  background-color: #ffc9d2;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_c4f2c_row8_col1 {
+  background-color: #ffc0ca;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_c4f2c_row10_col1, #T_c4f2c_row14_col1 {
+  background-color: #ffbfc9;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_c4f2c_row12_col1 {
+  background-color: #ffc4ce;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_c4f2c_row15_col1 {
+  background-color: #ffbac5;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_c4f2c_row16_col1 {
+  background-color: #ffc6cf;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_c4f2c_row17_col1 {
+  background-color: #ffcad3;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+</style>
+<table id="T_c4f2c">
+  <caption>Average Elderly Percentage by District Council District</caption>
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_c4f2c_level0_col0" class="col_heading level0 col0" >District Council district (DCD)</th>
+      <th id="T_c4f2c_level0_col1" class="col_heading level0 col1" >Average Elderly Percentage (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_c4f2c_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_c4f2c_row0_col0" class="data row0 col0" >Central and Western</td>
+      <td id="T_c4f2c_row0_col1" class="data row0 col1" >19.64%</td>
+    </tr>
+    <tr>
+      <th id="T_c4f2c_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_c4f2c_row1_col0" class="data row1 col0" >Eastern</td>
+      <td id="T_c4f2c_row1_col1" class="data row1 col1" >23.68%</td>
+    </tr>
+    <tr>
+      <th id="T_c4f2c_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_c4f2c_row2_col0" class="data row2 col0" >Islands</td>
+      <td id="T_c4f2c_row2_col1" class="data row2 col1" >15.78%</td>
+    </tr>
+    <tr>
+      <th id="T_c4f2c_level0_row3" class="row_heading level0 row3" >3</th>
+      <td id="T_c4f2c_row3_col0" class="data row3 col0" >Kowloon City</td>
+      <td id="T_c4f2c_row3_col1" class="data row3 col1" >20.04%</td>
+    </tr>
+    <tr>
+      <th id="T_c4f2c_level0_row4" class="row_heading level0 row4" >4</th>
+      <td id="T_c4f2c_row4_col0" class="data row4 col0" >Kwai Tsing</td>
+      <td id="T_c4f2c_row4_col1" class="data row4 col1" >22.10%</td>
+    </tr>
+    <tr>
+      <th id="T_c4f2c_level0_row5" class="row_heading level0 row5" >5</th>
+      <td id="T_c4f2c_row5_col0" class="data row5 col0" >Kwun Tong</td>
+      <td id="T_c4f2c_row5_col1" class="data row5 col1" >22.04%</td>
+    </tr>
+    <tr>
+      <th id="T_c4f2c_level0_row6" class="row_heading level0 row6" >6</th>
+      <td id="T_c4f2c_row6_col0" class="data row6 col0" >North</td>
+      <td id="T_c4f2c_row6_col1" class="data row6 col1" >18.70%</td>
+    </tr>
+    <tr>
+      <th id="T_c4f2c_level0_row7" class="row_heading level0 row7" >7</th>
+      <td id="T_c4f2c_row7_col0" class="data row7 col0" >Sai Kung</td>
+      <td id="T_c4f2c_row7_col1" class="data row7 col1" >17.10%</td>
+    </tr>
+    <tr>
+      <th id="T_c4f2c_level0_row8" class="row_heading level0 row8" >8</th>
+      <td id="T_c4f2c_row8_col0" class="data row8 col0" >Sha Tin</td>
+      <td id="T_c4f2c_row8_col1" class="data row8 col1" >20.84%</td>
+    </tr>
+    <tr>
+      <th id="T_c4f2c_level0_row9" class="row_heading level0 row9" >9</th>
+      <td id="T_c4f2c_row9_col0" class="data row9 col0" >Sham Shui Po</td>
+      <td id="T_c4f2c_row9_col1" class="data row9 col1" >20.22%</td>
+    </tr>
+    <tr>
+      <th id="T_c4f2c_level0_row10" class="row_heading level0 row10" >10</th>
+      <td id="T_c4f2c_row10_col0" class="data row10 col0" >Southern</td>
+      <td id="T_c4f2c_row10_col1" class="data row10 col1" >21.34%</td>
+    </tr>
+    <tr>
+      <th id="T_c4f2c_level0_row11" class="row_heading level0 row11" >11</th>
+      <td id="T_c4f2c_row11_col0" class="data row11 col0" >Tai Po</td>
+      <td id="T_c4f2c_row11_col1" class="data row11 col1" >19.62%</td>
+    </tr>
+    <tr>
+      <th id="T_c4f2c_level0_row12" class="row_heading level0 row12" >12</th>
+      <td id="T_c4f2c_row12_col0" class="data row12 col0" >Tsuen Wan</td>
+      <td id="T_c4f2c_row12_col1" class="data row12 col1" >19.06%</td>
+    </tr>
+    <tr>
+      <th id="T_c4f2c_level0_row13" class="row_heading level0 row13" >13</th>
+      <td id="T_c4f2c_row13_col0" class="data row13 col0" >Tuen Mun</td>
+      <td id="T_c4f2c_row13_col1" class="data row13 col1" >19.84%</td>
+    </tr>
+    <tr>
+      <th id="T_c4f2c_level0_row14" class="row_heading level0 row14" >14</th>
+      <td id="T_c4f2c_row14_col0" class="data row14 col0" >Wan Chai</td>
+      <td id="T_c4f2c_row14_col1" class="data row14 col1" >21.44%</td>
+    </tr>
+    <tr>
+      <th id="T_c4f2c_level0_row15" class="row_heading level0 row15" >15</th>
+      <td id="T_c4f2c_row15_col0" class="data row15 col0" >Wong Tai Sin</td>
+      <td id="T_c4f2c_row15_col1" class="data row15 col1" >23.14%</td>
+    </tr>
+    <tr>
+      <th id="T_c4f2c_level0_row16" class="row_heading level0 row16" >16</th>
+      <td id="T_c4f2c_row16_col0" class="data row16 col0" >Yau Tsim Mong</td>
+      <td id="T_c4f2c_row16_col1" class="data row16 col1" >18.28%</td>
+    </tr>
+    <tr>
+      <th id="T_c4f2c_level0_row17" class="row_heading level0 row17" >17</th>
+      <td id="T_c4f2c_row17_col0" class="data row17 col0" >Yuen Long</td>
+      <td id="T_c4f2c_row17_col1" class="data row17 col1" >16.64%</td>
+    </tr>
+  </tbody>
+</table>
+
+        <div class="footer">
+            Generated on 2025-07-22 06:40 | 
+            Data Source: Elderly Population Statistics
+        </div>
+    </div>
+</body>
+</html>

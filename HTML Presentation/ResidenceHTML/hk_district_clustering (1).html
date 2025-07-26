@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>香港地区聚类分析报告</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            margin: 20px auto;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            position: sticky;
+            top: 0;
+        }
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        .number {
+            text-align: right;
+        }
+        .cluster-0 { background-color: #FF999955; }
+        .cluster-1 { background-color: #99FF9955; }
+        .cluster-2 { background-color: #9999FF55; }
+        .cluster-header {
+            font-weight: bold;
+            text-align: center;
+        }
+        .interpretation {
+            width: 80%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>香港地区聚类分析报告</h1>
+    <div class="subtitle">基于人口密度、老年人口比例和收入中位数的分析</div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>排名</th>
+                <th>地区</th>
+                <th>人口密度</th>
+                <th>老年人口比例(%)</th>
+                <th>收入中位数(HK$)</th>
+                <th>聚类分组</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr class="cluster-0">
+                <td>3</td>
+                <td>Eastern</td>
+                <td class="number">28,810</td>
+                <td class="number">23.68%</td>
+                <td class="number">HK$32,300</td>
+                <td style="text-align: center; background-color: #FF9999">
+                    0
+                </td>
+            </tr>
+
+            <tr class="cluster-0">
+                <td>7</td>
+                <td>Kowloon City</td>
+                <td class="number">40,310</td>
+                <td class="number">20.04%</td>
+                <td class="number">HK$30,300</td>
+                <td style="text-align: center; background-color: #FF9999">
+                    0
+                </td>
+            </tr>
+
+            <tr class="cluster-0">
+                <td>6</td>
+                <td>Sham Shui Po</td>
+                <td class="number">46,220</td>
+                <td class="number">20.22%</td>
+                <td class="number">HK$23,380</td>
+                <td style="text-align: center; background-color: #FF9999">
+                    0
+                </td>
+            </tr>
+
+            <tr class="cluster-0">
+                <td>5</td>
+                <td>Yau Tsim Mong</td>
+                <td class="number">42,400</td>
+                <td class="number">18.28%</td>
+                <td class="number">HK$28,920</td>
+                <td style="text-align: center; background-color: #FF9999">
+                    0
+                </td>
+            </tr>
+
+            <tr class="cluster-0">
+                <td>8</td>
+                <td>Wong Tai Sin</td>
+                <td class="number">43,480</td>
+                <td class="number">23.14%</td>
+                <td class="number">HK$24,540</td>
+                <td style="text-align: center; background-color: #FF9999">
+                    0
+                </td>
+            </tr>
+
+            <tr class="cluster-0">
+                <td>9</td>
+                <td>Kwun Tong</td>
+                <td class="number">59,340</td>
+                <td class="number">22.04%</td>
+                <td class="number">HK$22,900</td>
+                <td style="text-align: center; background-color: #FF9999">
+                    0
+                </td>
+            </tr>
+
+            <tr class="cluster-0">
+                <td>10</td>
+                <td>Kwai Tsing</td>
+                <td class="number">21,040</td>
+                <td class="number">22.10%</td>
+                <td class="number">HK$24,680</td>
+                <td style="text-align: center; background-color: #FF9999">
+                    0
+                </td>
+            </tr>
+
+            <tr class="cluster-1">
+                <td>4</td>
+                <td>Southern</td>
+                <td class="number">6,620</td>
+                <td class="number">21.34%</td>
+                <td class="number">HK$34,260</td>
+                <td style="text-align: center; background-color: #99FF99">
+                    1
+                </td>
+            </tr>
+
+            <tr class="cluster-1">
+                <td>13</td>
+                <td>Yuen Long</td>
+                <td class="number">4,750</td>
+                <td class="number">16.64%</td>
+                <td class="number">HK$28,200</td>
+                <td style="text-align: center; background-color: #99FF99">
+                    1
+                </td>
+            </tr>
+
+            <tr class="cluster-1">
+                <td>14</td>
+                <td>North</td>
+                <td class="number">2,460</td>
+                <td class="number">18.70%</td>
+                <td class="number">HK$24,800</td>
+                <td style="text-align: center; background-color: #99FF99">
+                    1
+                </td>
+            </tr>
+
+            <tr class="cluster-1">
+                <td>11</td>
+                <td>Tsuen Wan</td>
+                <td class="number">5,020</td>
+                <td class="number">19.06%</td>
+                <td class="number">HK$32,540</td>
+                <td style="text-align: center; background-color: #99FF99">
+                    1
+                </td>
+            </tr>
+
+            <tr class="cluster-1">
+                <td>12</td>
+                <td>Tuen Mun</td>
+                <td class="number">5,930</td>
+                <td class="number">19.84%</td>
+                <td class="number">HK$25,720</td>
+                <td style="text-align: center; background-color: #99FF99">
+                    1
+                </td>
+            </tr>
+
+            <tr class="cluster-1">
+                <td>15</td>
+                <td>Tai Po</td>
+                <td class="number">2,310</td>
+                <td class="number">19.62%</td>
+                <td class="number">HK$30,540</td>
+                <td style="text-align: center; background-color: #99FF99">
+                    1
+                </td>
+            </tr>
+
+            <tr class="cluster-1">
+                <td>16</td>
+                <td>Sha Tin</td>
+                <td class="number">10,020</td>
+                <td class="number">20.84%</td>
+                <td class="number">HK$29,340</td>
+                <td style="text-align: center; background-color: #99FF99">
+                    1
+                </td>
+            </tr>
+
+            <tr class="cluster-1">
+                <td>18</td>
+                <td>Islands</td>
+                <td class="number">1,000</td>
+                <td class="number">15.78%</td>
+                <td class="number">HK$29,360</td>
+                <td style="text-align: center; background-color: #99FF99">
+                    1
+                </td>
+            </tr>
+
+            <tr class="cluster-2">
+                <td>2</td>
+                <td>Wan Chai</td>
+                <td class="number">14,970</td>
+                <td class="number">21.44%</td>
+                <td class="number">HK$40,700</td>
+                <td style="text-align: center; background-color: #9999FF">
+                    2
+                </td>
+            </tr>
+
+            <tr class="cluster-2">
+                <td>1</td>
+                <td>Central and Western</td>
+                <td class="number">17,820</td>
+                <td class="number">19.64%</td>
+                <td class="number">HK$42,100</td>
+                <td style="text-align: center; background-color: #9999FF">
+                    2
+                </td>
+            </tr>
+
+            <tr class="cluster-2">
+                <td>17</td>
+                <td>Sai Kung</td>
+                <td class="number">3,800</td>
+                <td class="number">17.10%</td>
+                <td class="number">HK$38,880</td>
+                <td style="text-align: center; background-color: #9999FF">
+                    2
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    
+    <div class="interpretation">
+        <h3>聚类结果解读：</h3>
+        <ul>
+            <li><strong style="color: #FF9999">聚类0</strong>: ['Eastern', 'Kowloon City', 'Sham Shui Po', 'Yau Tsim Mong', 'Wong Tai Sin', 'Kwun Tong', 'Kwai Tsing']</li>
+            <li><strong style="color: #99FF99">聚类1</strong>: ['Southern', 'Yuen Long', 'North', 'Tsuen Wan', 'Tuen Mun', 'Tai Po', 'Sha Tin', 'Islands']</li>
+            <li><strong style="color: #9999FF">聚类2</strong>: ['Wan Chai', 'Central and Western', 'Sai Kung']</li>
+        </ul>
+        
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Summary of Data Preprocessing Tools</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .slide {
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 16px;
+        }
+
+        thead tr {
+            border-bottom: 2px solid black;
+        }
+
+        thead th {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tbody tr:not(:last-child) {
+            border-bottom: 1px solid #ccc;
+        }
+
+        tbody td {
+            padding: 8px;
+            vertical-align: top;
+        }
+
+        tfoot tr {
+            border-top: 2px solid black;
+        }
+
+        a {
+            word-break: break-word;
+            color: #3366cc;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<section>
+    <h2 style="text-align:center;">Summary of Data Preprocessing Tools</h2>
+    <table style="width: 100%; border-collapse: collapse; font-size: 16px; margin-top: 20px;">
+        <thead>
+            <tr style="border-bottom: 2px solid black;">
+                <th style="text-align: left; padding: 8px;">Tool</th>
+                <th style="text-align: left; padding: 8px;">Purpose</th>
+                <th style="text-align: left; padding: 8px;">Usage Example</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding: 8px;">Pandas</td>
+                <td style="padding: 8px;">Tabular data cleaning and filtering</td>
+                <td style="padding: 8px;"><code>df.dropna()</code>, <code>df.merge()</code></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px;">GeoPandas</td>
+                <td style="padding: 8px;">Spatial joins and coordinate transformation</td>
+                <td style="padding: 8px;"><code>gdf.to_crs()</code>, <code>sjoin()</code></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px;">NetworkX</td>
+                <td style="padding: 8px;">Graph construction and centrality analysis</td>
+                <td style="padding: 8px;"><code>nx.betweenness_centrality()</code></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px;">Scikit-learn</td>
+                <td style="padding: 8px;">Standardization, clustering, distance metrics</td>
+                <td style="padding: 8px;"><code>StandardScaler()</code>, <code>KMeans()</code></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px;">mlxtend (FP-Growth)</td>
+                <td style="padding: 8px;">Frequent itemset mining and association rules</td>
+                <td style="padding: 8px;"><code>fpgrowth()</code>, <code>association_rules()</code></td>
+            </tr>
+            <tr>
+                <td style="padding: 8px;">Folium / Plotly</td>
+                <td style="padding: 8px;">Interactive map & visualizations</td>
+                <td style="padding: 8px;"><code>folium.Marker()</code>, <code>go.Scattermapbox</code></td>
+            </tr>
+        </tbody>
+    </table>
+</section>

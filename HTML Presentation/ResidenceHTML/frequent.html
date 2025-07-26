@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Flow Data</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafc;
+            color: #2d3748;
+            line-height: 1.5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2d3748;
+            text-align: center;
+            padding: 20px 0;
+            margin: 0 0 10px 0;
+            font-size: 1.8em;
+            font-weight: 600;
+        }
+        .subtitle {
+            text-align: center;
+            color: #4a5568;
+            margin: 0 0 30px 0;
+            font-size: 1.1em;
+        }
+
+        /* Table Styles */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            font-size: 0.9em;
+        }
+        th, td {
+            padding: 10px 12px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th {
+            background-color: #FF1278;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.85em;
+        }
+        tr:hover {
+            background-color: #f7fafc;
+        }
+        .number {
+            text-align: middle;
+            font-family: 'Courier New', monospace;
+        }
+        .cluster-0 { background-color: #fff5f5; } /* Light red */
+        .cluster-1 { background-color: #f0fff4; } /* Light green */
+        .cluster-2 { background-color: #f8fafc; } /* Light blue */
+        .cluster-label {
+            font-weight: 600;
+            text-align: center;
+            border-radius: 12px;
+            padding: 3px 8px;
+            font-size: 0.85em;
+            display: inline-block;
+        }
+        .cluster-0 .cluster-label { background-color: #fed7d7; color: #9b2c2c; }
+        .cluster-1 .cluster-label { background-color: #c6f6d5; color: #276749; }
+        .cluster-2 .cluster-label { background-color: #bee3f8; color: #2c5282; }
+
+        /* Interpretation Section */
+        .interpretation {
+            width: 100%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        .interpretation h3 {
+            margin-top: 0;
+            color: #2d3748;
+            font-size: 1.2em;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+        .interpretation ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .interpretation li {
+            margin: 5px 0;
+            font-size: 0.95em;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+        .cluster-0-badge { background-color: #fff5f5; color: #9b2c2c; border-left: 3px solid #e53e3e; }
+        .cluster-1-badge { background-color: #f0fff4; color: #276749; border-left: 3px solid #48bb78; }
+        .cluster-2-badge { background-color: #f8fafc; color: #2c5282; border-left: 3px solid #4299e1; }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            table {
+                font-size: 0.8em;
+            }
+            th, td {
+                padding: 8px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Hong Kong Traffic Flow Data</h1>
+    
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>AADT</th>
+                    <th>AM Peak</th>
+                    <th>PM Peak</th>
+                    <th>Direction</th>
+                    <th>Station ID</th>
+                    <th>Latitude</th>
+                    <th>Longitude</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>37,250</td>
+                    <td>2,220</td>
+                    <td>2,130</td>
+                    <td class="direction-east">EAST</td>
+                    <td>1001</td>
+                    <td>22.279588</td>
+                    <td>114.166616</td>
+                </tr>
+                <tr>
+                    <td>77,250</td>
+                    <td>5,180</td>
+                    <td>4,600</td>
+                    <td class="direction-west">WEST</td>
+                    <td>1001</td>
+                    <td>22.279588</td>
+                    <td>114.166616</td>
+                </tr>
+                <tr>
+                    <td>52,590</td>
+                    <td>2,960</td>
+                    <td>3,050</td>
+                    <td class="direction-east">EAST</td>
+                    <td>1002</td>
+                    <td>22.283070</td>
+                    <td>114.185278</td>
+                </tr>
+                <tr>
+                    <td>61,190</td>
+                    <td>3,850</td>
+                    <td>3,560</td>
+                    <td class="direction-west">WEST</td>
+                    <td>1002</td>
+                    <td>22.283070</td>
+                    <td>114.185278</td>
+                </tr>
+                <tr>
+                    <td>48,900</td>
+                    <td>3,060</td>
+                    <td>3,000</td>
+                    <td class="direction-east">EAST</td>
+                    <td>1003</td>
+                    <td>22.289050</td>
+                    <td>114.217300</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="footer">
+        <p>Data Source: Hong Kong Transport Department | AADT = Annual Average Daily Traffic</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hong Kong District Clustering Analysis</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8fafc;
+            color: #2d3748;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2d3748;
+            text-align: center;
+            padding: 20px 0;
+            margin: 0 0 10px 0;
+            font-size: 1.8em;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #4a5568;
+            margin: 0 0 30px 0;
+            font-size: 1.1em;
+        }
+
+        /* Table Styles */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            font-size: 0.9em;
+        }
+
+        th,
+        td {
+            padding: 10px 12px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        th {
+            background-color: #FF1278;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 0.85em;
+        }
+
+        tr:hover {
+            background-color: #f7fafc;
+        }
+
+        .number {
+            text-align: middle;
+            font-family: 'Courier New', monospace;
+        }
+
+        .cluster-0 {
+            background-color: #fff5f5;
+        }
+
+        /* Light red */
+        .cluster-1 {
+            background-color: #f0fff4;
+        }
+
+        /* Light green */
+        .cluster-2 {
+            background-color: #f8fafc;
+        }
+
+        /* Light blue */
+        .cluster-label {
+            font-weight: 600;
+            text-align: center;
+            border-radius: 12px;
+            padding: 3px 8px;
+            font-size: 0.85em;
+            display: inline-block;
+        }
+
+        .cluster-0 .cluster-label {
+            background-color: #fed7d7;
+            color: #9b2c2c;
+        }
+
+        .cluster-1 .cluster-label {
+            background-color: #c6f6d5;
+            color: #276749;
+        }
+
+        .cluster-2 .cluster-label {
+            background-color: #bee3f8;
+            color: #2c5282;
+        }
+
+        /* Interpretation Section */
+        .interpretation {
+            width: 100%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .interpretation h3 {
+            margin-top: 0;
+            color: #2d3748;
+            font-size: 1.2em;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+
+        .interpretation ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .interpretation li {
+            margin: 5px 0;
+            font-size: 0.95em;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+
+        .cluster-0-badge {
+            background-color: #fff5f5;
+            color: #9b2c2c;
+            border-left: 3px solid #e53e3e;
+        }
+
+        .cluster-1-badge {
+            background-color: #f0fff4;
+            color: #276749;
+            border-left: 3px solid #48bb78;
+        }
+
+        .cluster-2-badge {
+            background-color: #f8fafc;
+            color: #2c5282;
+            border-left: 3px solid #4299e1;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            table {
+                font-size: 0.8em;
+            }
+
+            th,
+            td {
+                padding: 8px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hong Kong District Clustering Analysis</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>District</th>
+                    <th>Population Density</th>
+                    <th>Elderly Percentage</th>
+                    <th>Median Income</th>
+                    <th>Cluster</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr class="cluster-0">
+                    <td>Eastern</td>
+                    <td class="number">0.477</td>
+                    <td class="number">1.000</td>
+                    <td class="number">0.490</td>
+                    <td><span class="cluster-label">Cluster 0</span></td>
+                </tr>
+
+                <tr class="cluster-0">
+                    <td>Yau Tsim Mong</td>
+                    <td class="number">0.710</td>
+                    <td class="number">0.316</td>
+                    <td class="number">0.314</td>
+                    <td><span class="cluster-label">Cluster 0</span></td>
+                </tr>
+                <tr class="cluster-0">
+                    <td>Sham Shui Po</td>
+                    <td class="number">0.775</td>
+                    <td class="number">0.562</td>
+                    <td class="number">0.025</td>
+                    <td><span class="cluster-label">Cluster 0</span></td>
+                </tr>
+                <tr class="cluster-0">
+                    <td>Kowloon City</td>
+                    <td class="number">0.674</td>
+                    <td class="number">0.539</td>
+                    <td class="number">0.385</td>
+                    <td><span class="cluster-label">Cluster 0</span></td>
+                </tr>
+                <tr class="cluster-0">
+                    <td>Wong Tai Sin</td>
+                    <td class="number">0.728</td>
+                    <td class="number">0.932</td>
+                    <td class="number">0.085</td>
+                    <td><span class="cluster-label">Cluster 0</span></td>
+                </tr>
+                <tr class="cluster-0">
+                    <td>Kwun Tong</td>
+                    <td class="number">1.000</td>
+                    <td class="number">0.792</td>
+                    <td class="number">0.000</td>
+                    <td><span class="cluster-label">Cluster 0</span></td>
+                </tr>
+                <tr class="cluster-0">
+                    <td>Kwai Tsing</td>
+                    <td class="number">0.344</td>
+                    <td class="number">0.800</td>
+                    <td class="number">0.093</td>
+                    <td><span class="cluster-label">Cluster 0</span></td>
+                </tr>
+                <tr class="cluster-1">
+                    <td>Southern</td>
+                    <td class="number">0.096</td>
+                    <td class="number">0.704</td>
+                    <td class="number">0.592</td>
+                    <td><span class="cluster-label">Cluster 1</span></td>
+                </tr>
+                <tr class="cluster-1">
+                    <td>Tsuen Wan</td>
+                    <td class="number">0.069</td>
+                    <td class="number">0.415</td>
+                    <td class="number">0.502</td>
+                    <td><span class="cluster-label">Cluster 1</span></td>
+                </tr>
+                <tr class="cluster-1">
+                    <td>Tuen Mun</td>
+                    <td class="number">0.085</td>
+                    <td class="number">0.514</td>
+                    <td class="number">0.149</td>
+                    <td><span class="cluster-label">Cluster 1</span></td>
+                </tr>
+                <tr class="cluster-1">
+                    <td>Yuen Long</td>
+                    <td class="number">0.064</td>
+                    <td class="number">0.109</td>
+                    <td class="number">0.276</td>
+                    <td><span class="cluster-label">Cluster 1</span></td>
+                </tr>
+                <tr class="cluster-1">
+                    <td>North</td>
+                    <td class="number">0.025</td>
+                    <td class="number">0.370</td>
+                    <td class="number">0.099</td>
+                    <td><span class="cluster-label">Cluster 1</span></td>
+                </tr>
+                <tr class="cluster-1">
+                    <td>Tai Po</td>
+                    <td class="number">0.022</td>
+                    <td class="number">0.486</td>
+                    <td class="number">0.398</td>
+                    <td><span class="cluster-label">Cluster 1</span></td>
+                </tr>
+                <tr class="cluster-1">
+                    <td>Sha Tin</td>
+                    <td class="number">0.155</td>
+                    <td class="number">0.641</td>
+                    <td class="number">0.335</td>
+                    <td><span class="cluster-label">Cluster 1</span></td>
+                </tr>
+
+                <tr class="cluster-1">
+                    <td>Islands</td>
+                    <td class="number">0.000</td>
+                    <td class="number">0.000</td>
+                    <td class="number">0.336</td>
+                    <td><span class="cluster-label">Cluster 1</span></td>
+                </tr>
+                <tr class="cluster-2">
+                    <td>Central and Western</td>
+                    <td class="number">0.288</td>
+                    <td class="number">0.489</td>
+                    <td class="number">1.000</td>
+                    <td><span class="cluster-label">Cluster 2</span></td>
+                </tr>
+                <tr class="cluster-2">
+                    <td>Wan Chai</td>
+                    <td class="number">0.239</td>
+                    <td class="number">0.716</td>
+                    <td class="number">0.927</td>
+                    <td><span class="cluster-label">Cluster 2</span></td>
+                </tr>
+                <tr class="cluster-2">
+                    <td>Sai Kung</td>
+                    <td class="number">0.048</td>
+                    <td class="number">0.167</td>
+                    <td class="number">0.832</td>
+                    <td><span class="cluster-label">Cluster 2</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="interpretation">
+            <h3>Cluster Characteristics (Standardized 0-1 Scale)</h3>
+            <ul>
+                <li class="cluster-0-badge"><strong>Cluster 0</strong>: High population density (0.47-1.00), high
+                    elderly percentages (0.32-1.00), lower incomes (0.00-0.49)</li>
+                <li class="cluster-1-badge"><strong>Cluster 1</strong>: Low population density (0.00-0.16), moderate
+                    elderly percentages (0.00-0.70), moderate incomes (0.10-0.60)</li>
+                <li class="cluster-2-badge"><strong>Cluster 2</strong>: Medium population density (0.24-0.29), varying
+                    elderly percentages (0.17-0.72), highest incomes (0.83-1.00)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,1355 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Enhanced Elderly Population Report</title>
+    <style>
+        body { 
+            padding: 30px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+        .report-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(11, 218, 184, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #0BDAB8;
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #E6FFFA;
+            padding-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            margin: 20px 0;
+        }
+        caption {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #888;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="report-container">
+        <h1>Elderly Population Analysis Report</h1>
+        <style type="text/css">
+#T_2d07f th {
+  background-color: #0BDAB8;
+  color: white;
+}
+#T_2d07f_row0_col0, #T_2d07f_row0_col1, #T_2d07f_row1_col0, #T_2d07f_row1_col1, #T_2d07f_row2_col0, #T_2d07f_row2_col1, #T_2d07f_row3_col0, #T_2d07f_row3_col1, #T_2d07f_row4_col0, #T_2d07f_row4_col1, #T_2d07f_row5_col0, #T_2d07f_row5_col1, #T_2d07f_row6_col0, #T_2d07f_row6_col1, #T_2d07f_row7_col0, #T_2d07f_row7_col1, #T_2d07f_row8_col0, #T_2d07f_row8_col1, #T_2d07f_row9_col0, #T_2d07f_row9_col1, #T_2d07f_row10_col0, #T_2d07f_row10_col1, #T_2d07f_row11_col0, #T_2d07f_row11_col1, #T_2d07f_row12_col0, #T_2d07f_row12_col1, #T_2d07f_row13_col0, #T_2d07f_row13_col1, #T_2d07f_row14_col0, #T_2d07f_row14_col1, #T_2d07f_row15_col0, #T_2d07f_row15_col1, #T_2d07f_row16_col0, #T_2d07f_row16_col1, #T_2d07f_row17_col0, #T_2d07f_row17_col1, #T_2d07f_row18_col0, #T_2d07f_row18_col1, #T_2d07f_row19_col0, #T_2d07f_row19_col1, #T_2d07f_row20_col0, #T_2d07f_row20_col1, #T_2d07f_row21_col0, #T_2d07f_row21_col1, #T_2d07f_row22_col0, #T_2d07f_row22_col1, #T_2d07f_row23_col0, #T_2d07f_row23_col1, #T_2d07f_row24_col0, #T_2d07f_row24_col1, #T_2d07f_row25_col0, #T_2d07f_row25_col1, #T_2d07f_row26_col0, #T_2d07f_row26_col1, #T_2d07f_row27_col0, #T_2d07f_row27_col1, #T_2d07f_row28_col0, #T_2d07f_row28_col1, #T_2d07f_row29_col0, #T_2d07f_row29_col1, #T_2d07f_row30_col0, #T_2d07f_row30_col1, #T_2d07f_row31_col0, #T_2d07f_row31_col1, #T_2d07f_row32_col0, #T_2d07f_row32_col1, #T_2d07f_row33_col0, #T_2d07f_row33_col1, #T_2d07f_row34_col0, #T_2d07f_row34_col1, #T_2d07f_row35_col0, #T_2d07f_row35_col1, #T_2d07f_row36_col0, #T_2d07f_row36_col1, #T_2d07f_row37_col0, #T_2d07f_row37_col1, #T_2d07f_row38_col0, #T_2d07f_row38_col1, #T_2d07f_row39_col0, #T_2d07f_row39_col1, #T_2d07f_row40_col0, #T_2d07f_row40_col1, #T_2d07f_row41_col0, #T_2d07f_row41_col1, #T_2d07f_row42_col0, #T_2d07f_row42_col1, #T_2d07f_row43_col0, #T_2d07f_row43_col1, #T_2d07f_row44_col0, #T_2d07f_row44_col1, #T_2d07f_row45_col0, #T_2d07f_row45_col1, #T_2d07f_row46_col0, #T_2d07f_row46_col1, #T_2d07f_row47_col0, #T_2d07f_row47_col1, #T_2d07f_row48_col0, #T_2d07f_row48_col1, #T_2d07f_row49_col0, #T_2d07f_row49_col1, #T_2d07f_row50_col0, #T_2d07f_row50_col1, #T_2d07f_row51_col0, #T_2d07f_row51_col1, #T_2d07f_row52_col0, #T_2d07f_row52_col1, #T_2d07f_row53_col0, #T_2d07f_row53_col1, #T_2d07f_row54_col0, #T_2d07f_row54_col1, #T_2d07f_row55_col0, #T_2d07f_row55_col1, #T_2d07f_row56_col0, #T_2d07f_row56_col1, #T_2d07f_row57_col0, #T_2d07f_row57_col1, #T_2d07f_row58_col0, #T_2d07f_row58_col1, #T_2d07f_row59_col0, #T_2d07f_row59_col1, #T_2d07f_row60_col0, #T_2d07f_row60_col1, #T_2d07f_row61_col0, #T_2d07f_row61_col1, #T_2d07f_row62_col0, #T_2d07f_row62_col1, #T_2d07f_row63_col0, #T_2d07f_row63_col1, #T_2d07f_row64_col0, #T_2d07f_row64_col1, #T_2d07f_row65_col0, #T_2d07f_row65_col1, #T_2d07f_row66_col0, #T_2d07f_row66_col1, #T_2d07f_row67_col0, #T_2d07f_row67_col1, #T_2d07f_row68_col0, #T_2d07f_row68_col1, #T_2d07f_row69_col0, #T_2d07f_row69_col1, #T_2d07f_row70_col0, #T_2d07f_row70_col1, #T_2d07f_row71_col0, #T_2d07f_row71_col1, #T_2d07f_row72_col0, #T_2d07f_row72_col1, #T_2d07f_row73_col0, #T_2d07f_row73_col1, #T_2d07f_row74_col0, #T_2d07f_row74_col1, #T_2d07f_row75_col0, #T_2d07f_row75_col1, #T_2d07f_row76_col0, #T_2d07f_row76_col1, #T_2d07f_row77_col0, #T_2d07f_row77_col1, #T_2d07f_row78_col0, #T_2d07f_row78_col1, #T_2d07f_row79_col0, #T_2d07f_row79_col1, #T_2d07f_row80_col0, #T_2d07f_row80_col1, #T_2d07f_row81_col0, #T_2d07f_row81_col1, #T_2d07f_row82_col0, #T_2d07f_row82_col1, #T_2d07f_row83_col0, #T_2d07f_row83_col1, #T_2d07f_row84_col0, #T_2d07f_row84_col1, #T_2d07f_row85_col0, #T_2d07f_row85_col1, #T_2d07f_row86_col0, #T_2d07f_row86_col1, #T_2d07f_row87_col0, #T_2d07f_row87_col1, #T_2d07f_row88_col0, #T_2d07f_row88_col1, #T_2d07f_row89_col0, #T_2d07f_row89_col1 {
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row0_col2, #T_2d07f_row18_col2 {
+  background-color: #cbfaf2;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row0_col3, #T_2d07f_row3_col3, #T_2d07f_row6_col3, #T_2d07f_row15_col3, #T_2d07f_row32_col3 {
+  background-color: #ffd1d9;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row1_col2 {
+  background-color: #ddfef7;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row1_col3, #T_2d07f_row9_col3, #T_2d07f_row18_col3, #T_2d07f_row29_col3, #T_2d07f_row40_col3, #T_2d07f_row49_col3, #T_2d07f_row84_col3 {
+  background-color: #ffd0d8;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row2_col2 {
+  background-color: #6cead5;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row2_col3, #T_2d07f_row8_col3, #T_2d07f_row46_col3, #T_2d07f_row88_col3 {
+  background-color: #ffcfd8;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row3_col2, #T_2d07f_row54_col2 {
+  background-color: #c5f9f0;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row4_col2, #T_2d07f_row28_col2, #T_2d07f_row39_col2, #T_2d07f_row40_col2 {
+  background-color: #b8f7ec;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row4_col3, #T_2d07f_row10_col3, #T_2d07f_row12_col3, #T_2d07f_row13_col3, #T_2d07f_row17_col3, #T_2d07f_row22_col3, #T_2d07f_row52_col3, #T_2d07f_row89_col3 {
+  background-color: #ffd3db;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row5_col2 {
+  background-color: #97f2e2;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row5_col3, #T_2d07f_row11_col3, #T_2d07f_row14_col3, #T_2d07f_row16_col3, #T_2d07f_row28_col3, #T_2d07f_row31_col3, #T_2d07f_row66_col3, #T_2d07f_row70_col3 {
+  background-color: #ffd2da;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row6_col2, #T_2d07f_row86_col2 {
+  background-color: #98f2e2;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row7_col2, #T_2d07f_row16_col2, #T_2d07f_row52_col2 {
+  background-color: #8df0df;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row7_col3, #T_2d07f_row23_col3, #T_2d07f_row33_col3, #T_2d07f_row67_col3 {
+  background-color: #ffced6;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row8_col2 {
+  background-color: #3fe3c8;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row9_col2, #T_2d07f_row59_col2 {
+  background-color: #7aedd9;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row10_col2, #T_2d07f_row21_col2, #T_2d07f_row22_col2 {
+  background-color: #bcf8ed;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row11_col2 {
+  background-color: #86efdd;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row12_col2 {
+  background-color: #61e9d2;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row13_col2 {
+  background-color: #baf8ed;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row14_col2, #T_2d07f_row31_col2 {
+  background-color: #bbf8ed;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row15_col2 {
+  background-color: #47e4ca;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row17_col2 {
+  background-color: #dffef8;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row19_col2 {
+  background-color: #dafdf6;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row19_col3, #T_2d07f_row21_col3, #T_2d07f_row41_col3, #T_2d07f_row64_col3 {
+  background-color: #ffcdd5;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row20_col2, #T_2d07f_row81_col2 {
+  background-color: #4ee5cc;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row20_col3, #T_2d07f_row86_col3 {
+  background-color: #ffc8d2;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row23_col2 {
+  background-color: #89efde;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row24_col2 {
+  background-color: #93f1e1;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row24_col3, #T_2d07f_row50_col3, #T_2d07f_row58_col3, #T_2d07f_row76_col3 {
+  background-color: #ffcfd7;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row25_col2, #T_2d07f_row78_col2 {
+  background-color: #7eeddb;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row25_col3, #T_2d07f_row37_col3, #T_2d07f_row44_col3, #T_2d07f_row45_col3, #T_2d07f_row55_col3, #T_2d07f_row57_col3, #T_2d07f_row69_col3 {
+  background-color: #ffc9d2;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row26_col2 {
+  background-color: #27dfc1;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row26_col3, #T_2d07f_row39_col3, #T_2d07f_row59_col3, #T_2d07f_row77_col3, #T_2d07f_row78_col3, #T_2d07f_row82_col3, #T_2d07f_row83_col3 {
+  background-color: #ffcad3;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row27_col2 {
+  background-color: #68ead4;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row27_col3, #T_2d07f_row60_col3, #T_2d07f_row72_col3, #T_2d07f_row85_col3 {
+  background-color: #ffcbd4;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row29_col2, #T_2d07f_row43_col2 {
+  background-color: #79edd9;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row30_col2 {
+  background-color: #75ecd8;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row30_col3 {
+  background-color: #ffd7de;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row32_col2 {
+  background-color: #b7f7ec;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row33_col2 {
+  background-color: #34e1c4;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row34_col2 {
+  background-color: #96f2e2;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row34_col3, #T_2d07f_row48_col3, #T_2d07f_row53_col3 {
+  background-color: #ffd5dd;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row35_col2 {
+  background-color: #e6fffa;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row35_col3 {
+  background-color: #ffd7df;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row36_col2 {
+  background-color: #cafaf1;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row36_col3, #T_2d07f_row42_col3, #T_2d07f_row47_col3, #T_2d07f_row54_col3 {
+  background-color: #ffcdd6;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row37_col2 {
+  background-color: #d8fdf6;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row38_col2, #T_2d07f_row84_col2 {
+  background-color: #45e4ca;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row38_col3, #T_2d07f_row61_col3, #T_2d07f_row81_col3 {
+  background-color: #ffc6cf;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row41_col2 {
+  background-color: #82eedc;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row42_col2 {
+  background-color: #8ef0df;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row43_col3, #T_2d07f_row62_col3, #T_2d07f_row73_col3, #T_2d07f_row87_col3 {
+  background-color: #ffc8d1;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row44_col2 {
+  background-color: #1fddbe;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row45_col2 {
+  background-color: #60e8d2;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row46_col2, #T_2d07f_row58_col2 {
+  background-color: #b2f6ea;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row47_col2 {
+  background-color: #6febd6;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row48_col2 {
+  background-color: #69ead4;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row49_col2, #T_2d07f_row50_col2, #T_2d07f_row75_col2 {
+  background-color: #aef6e9;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row51_col2 {
+  background-color: #26dfc0;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row51_col3, #T_2d07f_row65_col3, #T_2d07f_row68_col3 {
+  background-color: #ffccd5;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row53_col2 {
+  background-color: #e3fff9;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row55_col2 {
+  background-color: #d5fcf5;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row56_col2 {
+  background-color: #39e2c6;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row56_col3 {
+  background-color: #ffc4cd;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row57_col2, #T_2d07f_row76_col2 {
+  background-color: #b3f6eb;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row60_col2, #T_2d07f_row70_col2 {
+  background-color: #83eedc;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row61_col2 {
+  background-color: #70ebd7;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row62_col2, #T_2d07f_row69_col2 {
+  background-color: #13dbba;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row63_col2 {
+  background-color: #53e6ce;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row63_col3 {
+  background-color: #ffc7d0;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row64_col2 {
+  background-color: #aaf5e8;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row65_col2 {
+  background-color: #5ce8d0;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row66_col2 {
+  background-color: #54e6ce;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row67_col2 {
+  background-color: #a5f4e6;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row68_col2, #T_2d07f_row82_col2 {
+  background-color: #a6f4e7;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row71_col2 {
+  background-color: #e1fef8;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row71_col3 {
+  background-color: #ffd6de;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row72_col2 {
+  background-color: #c2f9ef;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row73_col2 {
+  background-color: #d4fcf5;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row74_col2 {
+  background-color: #31e0c3;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row74_col3 {
+  background-color: #ffc2cb;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row75_col3, #T_2d07f_row80_col3 {
+  background-color: #ffc6d0;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row77_col2 {
+  background-color: #77ecd9;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row79_col2 {
+  background-color: #66e9d3;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row79_col3 {
+  background-color: #ffc3cd;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row80_col2 {
+  background-color: #0edab9;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row83_col2 {
+  background-color: #51e6cd;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row85_col2 {
+  background-color: #9cf3e4;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row87_col2 {
+  background-color: #0bdab8;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row88_col2 {
+  background-color: #78ecd9;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+#T_2d07f_row89_col2 {
+  background-color: #dbfdf7;
+  color: #000000;
+  text-align: center;
+  font-family: Arial;
+  border: 1px solid #e0e0e0;
+}
+</style>
+<table id="T_2d07f" class="dataframe">
+  <caption>Elderly Population Statistics with Gradient Styling</caption>
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th id="T_2d07f_level0_col0" class="col_heading level0 col0" >Year</th>
+      <th id="T_2d07f_level0_col1" class="col_heading level0 col1" >District Council district (DCD)</th>
+      <th id="T_2d07f_level0_col2" class="col_heading level0 col2" >No.</th>
+      <th id="T_2d07f_level0_col3" class="col_heading level0 col3" >Percentage(%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_2d07f_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_2d07f_row0_col0" class="data row0 col0" >2020</td>
+      <td id="T_2d07f_row0_col1" class="data row0 col1" >Central and Western</td>
+      <td id="T_2d07f_row0_col2" class="data row0 col2" >43.20</td>
+      <td id="T_2d07f_row0_col3" class="data row0 col3" >18.3%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_2d07f_row1_col0" class="data row1 col0" >2020</td>
+      <td id="T_2d07f_row1_col1" class="data row1 col1" >Wan Chai</td>
+      <td id="T_2d07f_row1_col2" class="data row1 col2" >31.90</td>
+      <td id="T_2d07f_row1_col3" class="data row1 col3" >18.4%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_2d07f_row2_col0" class="data row2 col0" >2020</td>
+      <td id="T_2d07f_row2_col1" class="data row2 col1" >Eastern</td>
+      <td id="T_2d07f_row2_col2" class="data row2 col2" >101.40</td>
+      <td id="T_2d07f_row2_col3" class="data row2 col3" >18.8%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row3" class="row_heading level0 row3" >3</th>
+      <td id="T_2d07f_row3_col0" class="data row3 col0" >2020</td>
+      <td id="T_2d07f_row3_col1" class="data row3 col1" >Southern</td>
+      <td id="T_2d07f_row3_col2" class="data row3 col2" >47.10</td>
+      <td id="T_2d07f_row3_col3" class="data row3 col3" >18.1%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row4" class="row_heading level0 row4" >4</th>
+      <td id="T_2d07f_row4_col0" class="data row4 col0" >2020</td>
+      <td id="T_2d07f_row4_col1" class="data row4 col1" >Yau Tsim Mong</td>
+      <td id="T_2d07f_row4_col2" class="data row4 col2" >55.00</td>
+      <td id="T_2d07f_row4_col3" class="data row4 col3" >17.1%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row5" class="row_heading level0 row5" >5</th>
+      <td id="T_2d07f_row5_col0" class="data row5 col0" >2020</td>
+      <td id="T_2d07f_row5_col1" class="data row5 col1" >Sham Shui Po</td>
+      <td id="T_2d07f_row5_col2" class="data row5 col2" >75.30</td>
+      <td id="T_2d07f_row5_col3" class="data row5 col3" >17.3%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row6" class="row_heading level0 row6" >6</th>
+      <td id="T_2d07f_row6_col0" class="data row6 col0" >2020</td>
+      <td id="T_2d07f_row6_col1" class="data row6 col1" >Kowloon City</td>
+      <td id="T_2d07f_row6_col2" class="data row6 col2" >74.40</td>
+      <td id="T_2d07f_row6_col3" class="data row6 col3" >17.7%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row7" class="row_heading level0 row7" >7</th>
+      <td id="T_2d07f_row7_col0" class="data row7 col0" >2020</td>
+      <td id="T_2d07f_row7_col1" class="data row7 col1" >Wong Tai Sin</td>
+      <td id="T_2d07f_row7_col2" class="data row7 col2" >81.40</td>
+      <td id="T_2d07f_row7_col3" class="data row7 col3" >19.6%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row8" class="row_heading level0 row8" >8</th>
+      <td id="T_2d07f_row8_col0" class="data row8 col0" >2020</td>
+      <td id="T_2d07f_row8_col1" class="data row8 col1" >Kwun Tong</td>
+      <td id="T_2d07f_row8_col2" class="data row8 col2" >129.40</td>
+      <td id="T_2d07f_row8_col3" class="data row8 col3" >18.8%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row9" class="row_heading level0 row9" >9</th>
+      <td id="T_2d07f_row9_col0" class="data row9 col0" >2020</td>
+      <td id="T_2d07f_row9_col1" class="data row9 col1" >Kwai Tsing</td>
+      <td id="T_2d07f_row9_col2" class="data row9 col2" >92.90</td>
+      <td id="T_2d07f_row9_col3" class="data row9 col3" >18.5%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row10" class="row_heading level0 row10" >10</th>
+      <td id="T_2d07f_row10_col0" class="data row10 col0" >2020</td>
+      <td id="T_2d07f_row10_col1" class="data row10 col1" >Tsuen Wan</td>
+      <td id="T_2d07f_row10_col2" class="data row10 col2" >52.60</td>
+      <td id="T_2d07f_row10_col3" class="data row10 col3" >17.0%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row11" class="row_heading level0 row11" >11</th>
+      <td id="T_2d07f_row11_col0" class="data row11 col0" >2020</td>
+      <td id="T_2d07f_row11_col1" class="data row11 col1" >Tuen Mun</td>
+      <td id="T_2d07f_row11_col2" class="data row11 col2" >85.70</td>
+      <td id="T_2d07f_row11_col3" class="data row11 col3" >17.3%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row12" class="row_heading level0 row12" >12</th>
+      <td id="T_2d07f_row12_col0" class="data row12 col0" >2020</td>
+      <td id="T_2d07f_row12_col1" class="data row12 col1" >Yuen Long</td>
+      <td id="T_2d07f_row12_col2" class="data row12 col2" >108.20</td>
+      <td id="T_2d07f_row12_col3" class="data row12 col3" >16.9%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row13" class="row_heading level0 row13" >13</th>
+      <td id="T_2d07f_row13_col0" class="data row13 col0" >2020</td>
+      <td id="T_2d07f_row13_col1" class="data row13 col1" >North</td>
+      <td id="T_2d07f_row13_col2" class="data row13 col2" >53.50</td>
+      <td id="T_2d07f_row13_col3" class="data row13 col3" >17.0%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row14" class="row_heading level0 row14" >14</th>
+      <td id="T_2d07f_row14_col0" class="data row14 col0" >2020</td>
+      <td id="T_2d07f_row14_col1" class="data row14 col1" >Tai Po</td>
+      <td id="T_2d07f_row14_col2" class="data row14 col2" >53.00</td>
+      <td id="T_2d07f_row14_col3" class="data row14 col3" >17.2%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row15" class="row_heading level0 row15" >15</th>
+      <td id="T_2d07f_row15_col0" class="data row15 col0" >2020</td>
+      <td id="T_2d07f_row15_col1" class="data row15 col1" >Sha Tin</td>
+      <td id="T_2d07f_row15_col2" class="data row15 col2" >124.20</td>
+      <td id="T_2d07f_row15_col3" class="data row15 col3" >18.1%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row16" class="row_heading level0 row16" >16</th>
+      <td id="T_2d07f_row16_col0" class="data row16 col0" >2020</td>
+      <td id="T_2d07f_row16_col1" class="data row16 col1" >Sai Kung</td>
+      <td id="T_2d07f_row16_col2" class="data row16 col2" >81.30</td>
+      <td id="T_2d07f_row16_col3" class="data row16 col3" >17.2%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row17" class="row_heading level0 row17" >17</th>
+      <td id="T_2d07f_row17_col0" class="data row17 col0" >2020</td>
+      <td id="T_2d07f_row17_col1" class="data row17 col1" >Islands</td>
+      <td id="T_2d07f_row17_col2" class="data row17 col2" >30.60</td>
+      <td id="T_2d07f_row17_col3" class="data row17 col3" >16.6%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row18" class="row_heading level0 row18" >18</th>
+      <td id="T_2d07f_row18_col0" class="data row18 col0" >2021</td>
+      <td id="T_2d07f_row18_col1" class="data row18 col1" >Central and Western</td>
+      <td id="T_2d07f_row18_col2" class="data row18 col2" >43.60</td>
+      <td id="T_2d07f_row18_col3" class="data row18 col3" >18.7%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row19" class="row_heading level0 row19" >19</th>
+      <td id="T_2d07f_row19_col0" class="data row19 col0" >2021</td>
+      <td id="T_2d07f_row19_col1" class="data row19 col1" >Wan Chai</td>
+      <td id="T_2d07f_row19_col2" class="data row19 col2" >34.10</td>
+      <td id="T_2d07f_row19_col3" class="data row19 col3" >20.6%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row20" class="row_heading level0 row20" >20</th>
+      <td id="T_2d07f_row20_col0" class="data row20 col0" >2021</td>
+      <td id="T_2d07f_row20_col1" class="data row20 col1" >Eastern</td>
+      <td id="T_2d07f_row20_col2" class="data row20 col2" >120.00</td>
+      <td id="T_2d07f_row20_col3" class="data row20 col3" >22.9%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row21" class="row_heading level0 row21" >21</th>
+      <td id="T_2d07f_row21_col0" class="data row21 col0" >2021</td>
+      <td id="T_2d07f_row21_col1" class="data row21 col1" >Southern</td>
+      <td id="T_2d07f_row21_col2" class="data row21 col2" >52.40</td>
+      <td id="T_2d07f_row21_col3" class="data row21 col3" >20.4%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row22" class="row_heading level0 row22" >22</th>
+      <td id="T_2d07f_row22_col0" class="data row22 col0" >2021</td>
+      <td id="T_2d07f_row22_col1" class="data row22 col1" >Yau Tsim Mong</td>
+      <td id="T_2d07f_row22_col2" class="data row22 col2" >52.40</td>
+      <td id="T_2d07f_row22_col3" class="data row22 col3" >17.1%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row23" class="row_heading level0 row23" >23</th>
+      <td id="T_2d07f_row23_col0" class="data row23 col0" >2021</td>
+      <td id="T_2d07f_row23_col1" class="data row23 col1" >Sham Shui Po</td>
+      <td id="T_2d07f_row23_col2" class="data row23 col2" >83.60</td>
+      <td id="T_2d07f_row23_col3" class="data row23 col3" >19.7%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row24" class="row_heading level0 row24" >24</th>
+      <td id="T_2d07f_row24_col0" class="data row24 col0" >2021</td>
+      <td id="T_2d07f_row24_col1" class="data row24 col1" >Kowloon City</td>
+      <td id="T_2d07f_row24_col2" class="data row24 col2" >77.50</td>
+      <td id="T_2d07f_row24_col3" class="data row24 col3" >19.2%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row25" class="row_heading level0 row25" >25</th>
+      <td id="T_2d07f_row25_col0" class="data row25 col0" >2021</td>
+      <td id="T_2d07f_row25_col1" class="data row25 col1" >Wong Tai Sin</td>
+      <td id="T_2d07f_row25_col2" class="data row25 col2" >90.20</td>
+      <td id="T_2d07f_row25_col3" class="data row25 col3" >22.4%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row26" class="row_heading level0 row26" >26</th>
+      <td id="T_2d07f_row26_col0" class="data row26 col0" >2021</td>
+      <td id="T_2d07f_row26_col1" class="data row26 col1" >Kwun Tong</td>
+      <td id="T_2d07f_row26_col2" class="data row26 col2" >143.80</td>
+      <td id="T_2d07f_row26_col3" class="data row26 col3" >21.5%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row27" class="row_heading level0 row27" >27</th>
+      <td id="T_2d07f_row27_col0" class="data row27 col0" >2021</td>
+      <td id="T_2d07f_row27_col1" class="data row27 col1" >Kwai Tsing</td>
+      <td id="T_2d07f_row27_col2" class="data row27 col2" >103.80</td>
+      <td id="T_2d07f_row27_col3" class="data row27 col3" >21.3%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row28" class="row_heading level0 row28" >28</th>
+      <td id="T_2d07f_row28_col0" class="data row28 col0" >2021</td>
+      <td id="T_2d07f_row28_col1" class="data row28 col1" >Tsuen Wan</td>
+      <td id="T_2d07f_row28_col2" class="data row28 col2" >54.90</td>
+      <td id="T_2d07f_row28_col3" class="data row28 col3" >17.4%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row29" class="row_heading level0 row29" >29</th>
+      <td id="T_2d07f_row29_col0" class="data row29 col0" >2021</td>
+      <td id="T_2d07f_row29_col1" class="data row29 col1" >Tuen Mun</td>
+      <td id="T_2d07f_row29_col2" class="data row29 col2" >93.40</td>
+      <td id="T_2d07f_row29_col3" class="data row29 col3" >18.7%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row30" class="row_heading level0 row30" >30</th>
+      <td id="T_2d07f_row30_col0" class="data row30 col0" >2021</td>
+      <td id="T_2d07f_row30_col1" class="data row30 col1" >Yuen Long</td>
+      <td id="T_2d07f_row30_col2" class="data row30 col2" >96.20</td>
+      <td id="T_2d07f_row30_col3" class="data row30 col3" >14.5%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row31" class="row_heading level0 row31" >31</th>
+      <td id="T_2d07f_row31_col0" class="data row31 col0" >2021</td>
+      <td id="T_2d07f_row31_col1" class="data row31 col1" >North</td>
+      <td id="T_2d07f_row31_col2" class="data row31 col2" >52.90</td>
+      <td id="T_2d07f_row31_col3" class="data row31 col3" >17.3%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row32" class="row_heading level0 row32" >32</th>
+      <td id="T_2d07f_row32_col0" class="data row32 col0" >2021</td>
+      <td id="T_2d07f_row32_col1" class="data row32 col1" >Tai Po</td>
+      <td id="T_2d07f_row32_col2" class="data row32 col2" >55.60</td>
+      <td id="T_2d07f_row32_col3" class="data row32 col3" >17.8%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row33" class="row_heading level0 row33" >33</th>
+      <td id="T_2d07f_row33_col0" class="data row33 col0" >2021</td>
+      <td id="T_2d07f_row33_col1" class="data row33 col1" >Sha Tin</td>
+      <td id="T_2d07f_row33_col2" class="data row33 col2" >135.60</td>
+      <td id="T_2d07f_row33_col3" class="data row33 col3" >19.7%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row34" class="row_heading level0 row34" >34</th>
+      <td id="T_2d07f_row34_col0" class="data row34 col0" >2021</td>
+      <td id="T_2d07f_row34_col1" class="data row34 col1" >Sai Kung</td>
+      <td id="T_2d07f_row34_col2" class="data row34 col2" >75.40</td>
+      <td id="T_2d07f_row34_col3" class="data row34 col3" >15.5%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row35" class="row_heading level0 row35" >35</th>
+      <td id="T_2d07f_row35_col0" class="data row35 col0" >2021</td>
+      <td id="T_2d07f_row35_col1" class="data row35 col1" >Islands</td>
+      <td id="T_2d07f_row35_col2" class="data row35 col2" >26.30</td>
+      <td id="T_2d07f_row35_col3" class="data row35 col3" >14.4%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row36" class="row_heading level0 row36" >36</th>
+      <td id="T_2d07f_row36_col0" class="data row36 col0" >2022</td>
+      <td id="T_2d07f_row36_col1" class="data row36 col1" >Central and Western</td>
+      <td id="T_2d07f_row36_col2" class="data row36 col2" >44.20</td>
+      <td id="T_2d07f_row36_col3" class="data row36 col3" >20.0%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row37" class="row_heading level0 row37" >37</th>
+      <td id="T_2d07f_row37_col0" class="data row37 col0" >2022</td>
+      <td id="T_2d07f_row37_col1" class="data row37 col1" >Wan Chai</td>
+      <td id="T_2d07f_row37_col2" class="data row37 col2" >34.90</td>
+      <td id="T_2d07f_row37_col3" class="data row37 col3" >22.3%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row38" class="row_heading level0 row38" >38</th>
+      <td id="T_2d07f_row38_col0" class="data row38 col0" >2022</td>
+      <td id="T_2d07f_row38_col1" class="data row38 col1" >Eastern</td>
+      <td id="T_2d07f_row38_col2" class="data row38 col2" >125.30</td>
+      <td id="T_2d07f_row38_col3" class="data row38 col3" >24.4%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row39" class="row_heading level0 row39" >39</th>
+      <td id="T_2d07f_row39_col0" class="data row39 col0" >2022</td>
+      <td id="T_2d07f_row39_col1" class="data row39 col1" >Southern</td>
+      <td id="T_2d07f_row39_col2" class="data row39 col2" >54.70</td>
+      <td id="T_2d07f_row39_col3" class="data row39 col3" >21.9%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row40" class="row_heading level0 row40" >40</th>
+      <td id="T_2d07f_row40_col0" class="data row40 col0" >2022</td>
+      <td id="T_2d07f_row40_col1" class="data row40 col1" >Yau Tsim Mong</td>
+      <td id="T_2d07f_row40_col2" class="data row40 col2" >54.30</td>
+      <td id="T_2d07f_row40_col3" class="data row40 col3" >18.6%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row41" class="row_heading level0 row41" >41</th>
+      <td id="T_2d07f_row41_col0" class="data row41 col0" >2022</td>
+      <td id="T_2d07f_row41_col1" class="data row41 col1" >Sham Shui Po</td>
+      <td id="T_2d07f_row41_col2" class="data row41 col2" >88.00</td>
+      <td id="T_2d07f_row41_col3" class="data row41 col3" >20.7%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row42" class="row_heading level0 row42" >42</th>
+      <td id="T_2d07f_row42_col0" class="data row42 col0" >2022</td>
+      <td id="T_2d07f_row42_col1" class="data row42 col1" >Kowloon City</td>
+      <td id="T_2d07f_row42_col2" class="data row42 col2" >80.70</td>
+      <td id="T_2d07f_row42_col3" class="data row42 col3" >20.3%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row43" class="row_heading level0 row43" >43</th>
+      <td id="T_2d07f_row43_col0" class="data row43 col0" >2022</td>
+      <td id="T_2d07f_row43_col1" class="data row43 col1" >Wong Tai Sin</td>
+      <td id="T_2d07f_row43_col2" class="data row43 col2" >93.60</td>
+      <td id="T_2d07f_row43_col3" class="data row43 col3" >23.4%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row44" class="row_heading level0 row44" >44</th>
+      <td id="T_2d07f_row44_col0" class="data row44 col0" >2022</td>
+      <td id="T_2d07f_row44_col1" class="data row44 col1" >Kwun Tong</td>
+      <td id="T_2d07f_row44_col2" class="data row44 col2" >148.80</td>
+      <td id="T_2d07f_row44_col3" class="data row44 col3" >22.4%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row45" class="row_heading level0 row45" >45</th>
+      <td id="T_2d07f_row45_col0" class="data row45 col0" >2022</td>
+      <td id="T_2d07f_row45_col1" class="data row45 col1" >Kwai Tsing</td>
+      <td id="T_2d07f_row45_col2" class="data row45 col2" >108.70</td>
+      <td id="T_2d07f_row45_col3" class="data row45 col3" >22.5%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row46" class="row_heading level0 row46" >46</th>
+      <td id="T_2d07f_row46_col0" class="data row46 col0" >2022</td>
+      <td id="T_2d07f_row46_col1" class="data row46 col1" >Tsuen Wan</td>
+      <td id="T_2d07f_row46_col2" class="data row46 col2" >58.10</td>
+      <td id="T_2d07f_row46_col3" class="data row46 col3" >18.9%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row47" class="row_heading level0 row47" >47</th>
+      <td id="T_2d07f_row47_col0" class="data row47 col0" >2022</td>
+      <td id="T_2d07f_row47_col1" class="data row47 col1" >Tuen Mun</td>
+      <td id="T_2d07f_row47_col2" class="data row47 col2" >100.00</td>
+      <td id="T_2d07f_row47_col3" class="data row47 col3" >20.0%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row48" class="row_heading level0 row48" >48</th>
+      <td id="T_2d07f_row48_col0" class="data row48 col0" >2022</td>
+      <td id="T_2d07f_row48_col1" class="data row48 col1" >Yuen Long</td>
+      <td id="T_2d07f_row48_col2" class="data row48 col2" >103.70</td>
+      <td id="T_2d07f_row48_col3" class="data row48 col3" >15.9%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row49" class="row_heading level0 row49" >49</th>
+      <td id="T_2d07f_row49_col0" class="data row49 col0" >2022</td>
+      <td id="T_2d07f_row49_col1" class="data row49 col1" >North</td>
+      <td id="T_2d07f_row49_col2" class="data row49 col2" >60.80</td>
+      <td id="T_2d07f_row49_col3" class="data row49 col3" >18.4%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row50" class="row_heading level0 row50" >50</th>
+      <td id="T_2d07f_row50_col0" class="data row50 col0" >2022</td>
+      <td id="T_2d07f_row50_col1" class="data row50 col1" >Tai Po</td>
+      <td id="T_2d07f_row50_col2" class="data row50 col2" >60.60</td>
+      <td id="T_2d07f_row50_col3" class="data row50 col3" >19.5%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row51" class="row_heading level0 row51" >51</th>
+      <td id="T_2d07f_row51_col0" class="data row51 col0" >2022</td>
+      <td id="T_2d07f_row51_col1" class="data row51 col1" >Sha Tin</td>
+      <td id="T_2d07f_row51_col2" class="data row51 col2" >143.90</td>
+      <td id="T_2d07f_row51_col3" class="data row51 col3" >21.0%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row52" class="row_heading level0 row52" >52</th>
+      <td id="T_2d07f_row52_col0" class="data row52 col0" >2022</td>
+      <td id="T_2d07f_row52_col1" class="data row52 col1" >Sai Kung</td>
+      <td id="T_2d07f_row52_col2" class="data row52 col2" >81.50</td>
+      <td id="T_2d07f_row52_col3" class="data row52 col3" >16.6%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row53" class="row_heading level0 row53" >53</th>
+      <td id="T_2d07f_row53_col0" class="data row53 col0" >2022</td>
+      <td id="T_2d07f_row53_col1" class="data row53 col1" >Islands</td>
+      <td id="T_2d07f_row53_col2" class="data row53 col2" >28.00</td>
+      <td id="T_2d07f_row53_col3" class="data row53 col3" >15.6%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row54" class="row_heading level0 row54" >54</th>
+      <td id="T_2d07f_row54_col0" class="data row54 col0" >2023</td>
+      <td id="T_2d07f_row54_col1" class="data row54 col1" >Central and Western</td>
+      <td id="T_2d07f_row54_col2" class="data row54 col2" >46.40</td>
+      <td id="T_2d07f_row54_col3" class="data row54 col3" >20.0%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row55" class="row_heading level0 row55" >55</th>
+      <td id="T_2d07f_row55_col0" class="data row55 col0" >2023</td>
+      <td id="T_2d07f_row55_col1" class="data row55 col1" >Wan Chai</td>
+      <td id="T_2d07f_row55_col2" class="data row55 col2" >36.90</td>
+      <td id="T_2d07f_row55_col3" class="data row55 col3" >22.6%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row56" class="row_heading level0 row56" >56</th>
+      <td id="T_2d07f_row56_col0" class="data row56 col0" >2023</td>
+      <td id="T_2d07f_row56_col1" class="data row56 col1" >Eastern</td>
+      <td id="T_2d07f_row56_col2" class="data row56 col2" >132.90</td>
+      <td id="T_2d07f_row56_col3" class="data row56 col3" >25.6%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row57" class="row_heading level0 row57" >57</th>
+      <td id="T_2d07f_row57_col0" class="data row57 col0" >2023</td>
+      <td id="T_2d07f_row57_col1" class="data row57 col1" >Southern</td>
+      <td id="T_2d07f_row57_col2" class="data row57 col2" >57.40</td>
+      <td id="T_2d07f_row57_col3" class="data row57 col3" >22.4%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row58" class="row_heading level0 row58" >58</th>
+      <td id="T_2d07f_row58_col0" class="data row58 col0" >2023</td>
+      <td id="T_2d07f_row58_col1" class="data row58 col1" >Yau Tsim Mong</td>
+      <td id="T_2d07f_row58_col2" class="data row58 col2" >58.80</td>
+      <td id="T_2d07f_row58_col3" class="data row58 col3" >19.3%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row59" class="row_heading level0 row59" >59</th>
+      <td id="T_2d07f_row59_col0" class="data row59 col0" >2023</td>
+      <td id="T_2d07f_row59_col1" class="data row59 col1" >Sham Shui Po</td>
+      <td id="T_2d07f_row59_col2" class="data row59 col2" >93.20</td>
+      <td id="T_2d07f_row59_col3" class="data row59 col3" >21.5%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row60" class="row_heading level0 row60" >60</th>
+      <td id="T_2d07f_row60_col0" class="data row60 col0" >2023</td>
+      <td id="T_2d07f_row60_col1" class="data row60 col1" >Kowloon City</td>
+      <td id="T_2d07f_row60_col2" class="data row60 col2" >87.10</td>
+      <td id="T_2d07f_row60_col3" class="data row60 col3" >21.1%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row61" class="row_heading level0 row61" >61</th>
+      <td id="T_2d07f_row61_col0" class="data row61 col0" >2023</td>
+      <td id="T_2d07f_row61_col1" class="data row61 col1" >Wong Tai Sin</td>
+      <td id="T_2d07f_row61_col2" class="data row61 col2" >98.90</td>
+      <td id="T_2d07f_row61_col3" class="data row61 col3" >24.5%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row62" class="row_heading level0 row62" >62</th>
+      <td id="T_2d07f_row62_col0" class="data row62 col0" >2023</td>
+      <td id="T_2d07f_row62_col1" class="data row62 col1" >Kwun Tong</td>
+      <td id="T_2d07f_row62_col2" class="data row62 col2" >156.10</td>
+      <td id="T_2d07f_row62_col3" class="data row62 col3" >23.4%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row63" class="row_heading level0 row63" >63</th>
+      <td id="T_2d07f_row63_col0" class="data row63 col0" >2023</td>
+      <td id="T_2d07f_row63_col1" class="data row63 col1" >Kwai Tsing</td>
+      <td id="T_2d07f_row63_col2" class="data row63 col2" >116.80</td>
+      <td id="T_2d07f_row63_col3" class="data row63 col3" >23.8%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row64" class="row_heading level0 row64" >64</th>
+      <td id="T_2d07f_row64_col0" class="data row64 col0" >2023</td>
+      <td id="T_2d07f_row64_col1" class="data row64 col1" >Tsuen Wan</td>
+      <td id="T_2d07f_row64_col2" class="data row64 col2" >63.70</td>
+      <td id="T_2d07f_row64_col3" class="data row64 col3" >20.5%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row65" class="row_heading level0 row65" >65</th>
+      <td id="T_2d07f_row65_col0" class="data row65 col0" >2023</td>
+      <td id="T_2d07f_row65_col1" class="data row65 col1" >Tuen Mun</td>
+      <td id="T_2d07f_row65_col2" class="data row65 col2" >111.60</td>
+      <td id="T_2d07f_row65_col3" class="data row65 col3" >21.0%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row66" class="row_heading level0 row66" >66</th>
+      <td id="T_2d07f_row66_col0" class="data row66 col0" >2023</td>
+      <td id="T_2d07f_row66_col1" class="data row66 col1" >Yuen Long</td>
+      <td id="T_2d07f_row66_col2" class="data row66 col2" >116.10</td>
+      <td id="T_2d07f_row66_col3" class="data row66 col3" >17.3%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row67" class="row_heading level0 row67" >67</th>
+      <td id="T_2d07f_row67_col0" class="data row67 col0" >2023</td>
+      <td id="T_2d07f_row67_col1" class="data row67 col1" >North</td>
+      <td id="T_2d07f_row67_col2" class="data row67 col2" >66.50</td>
+      <td id="T_2d07f_row67_col3" class="data row67 col3" >19.6%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row68" class="row_heading level0 row68" >68</th>
+      <td id="T_2d07f_row68_col0" class="data row68 col0" >2023</td>
+      <td id="T_2d07f_row68_col1" class="data row68 col1" >Tai Po</td>
+      <td id="T_2d07f_row68_col2" class="data row68 col2" >65.70</td>
+      <td id="T_2d07f_row68_col3" class="data row68 col3" >20.9%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row69" class="row_heading level0 row69" >69</th>
+      <td id="T_2d07f_row69_col0" class="data row69 col0" >2023</td>
+      <td id="T_2d07f_row69_col1" class="data row69 col1" >Sha Tin</td>
+      <td id="T_2d07f_row69_col2" class="data row69 col2" >156.20</td>
+      <td id="T_2d07f_row69_col3" class="data row69 col3" >22.3%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row70" class="row_heading level0 row70" >70</th>
+      <td id="T_2d07f_row70_col0" class="data row70 col0" >2023</td>
+      <td id="T_2d07f_row70_col1" class="data row70 col1" >Sai Kung</td>
+      <td id="T_2d07f_row70_col2" class="data row70 col2" >87.40</td>
+      <td id="T_2d07f_row70_col3" class="data row70 col3" >17.4%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row71" class="row_heading level0 row71" >71</th>
+      <td id="T_2d07f_row71_col0" class="data row71 col0" >2023</td>
+      <td id="T_2d07f_row71_col1" class="data row71 col1" >Islands</td>
+      <td id="T_2d07f_row71_col2" class="data row71 col2" >29.70</td>
+      <td id="T_2d07f_row71_col3" class="data row71 col3" >15.2%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row72" class="row_heading level0 row72" >72</th>
+      <td id="T_2d07f_row72_col0" class="data row72 col0" >2024</td>
+      <td id="T_2d07f_row72_col1" class="data row72 col1" >Central and Western</td>
+      <td id="T_2d07f_row72_col2" class="data row72 col2" >48.60</td>
+      <td id="T_2d07f_row72_col3" class="data row72 col3" >21.2%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row73" class="row_heading level0 row73" >73</th>
+      <td id="T_2d07f_row73_col0" class="data row73 col0" >2024</td>
+      <td id="T_2d07f_row73_col1" class="data row73 col1" >Wan Chai</td>
+      <td id="T_2d07f_row73_col2" class="data row73 col2" >37.80</td>
+      <td id="T_2d07f_row73_col3" class="data row73 col3" >23.3%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row74" class="row_heading level0 row74" >74</th>
+      <td id="T_2d07f_row74_col0" class="data row74 col0" >2024</td>
+      <td id="T_2d07f_row74_col1" class="data row74 col1" >Eastern</td>
+      <td id="T_2d07f_row74_col2" class="data row74 col2" >137.60</td>
+      <td id="T_2d07f_row74_col3" class="data row74 col3" >26.7%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row75" class="row_heading level0 row75" >75</th>
+      <td id="T_2d07f_row75_col0" class="data row75 col0" >2024</td>
+      <td id="T_2d07f_row75_col1" class="data row75 col1" >Southern</td>
+      <td id="T_2d07f_row75_col2" class="data row75 col2" >60.90</td>
+      <td id="T_2d07f_row75_col3" class="data row75 col3" >23.9%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row76" class="row_heading level0 row76" >76</th>
+      <td id="T_2d07f_row76_col0" class="data row76 col0" >2024</td>
+      <td id="T_2d07f_row76_col1" class="data row76 col1" >Yau Tsim Mong</td>
+      <td id="T_2d07f_row76_col2" class="data row76 col2" >57.70</td>
+      <td id="T_2d07f_row76_col3" class="data row76 col3" >19.3%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row77" class="row_heading level0 row77" >77</th>
+      <td id="T_2d07f_row77_col0" class="data row77 col0" >2024</td>
+      <td id="T_2d07f_row77_col1" class="data row77 col1" >Sham Shui Po</td>
+      <td id="T_2d07f_row77_col2" class="data row77 col2" >94.80</td>
+      <td id="T_2d07f_row77_col3" class="data row77 col3" >21.9%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row78" class="row_heading level0 row78" >78</th>
+      <td id="T_2d07f_row78_col0" class="data row78 col0" >2024</td>
+      <td id="T_2d07f_row78_col1" class="data row78 col1" >Kowloon City</td>
+      <td id="T_2d07f_row78_col2" class="data row78 col2" >90.20</td>
+      <td id="T_2d07f_row78_col3" class="data row78 col3" >21.9%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row79" class="row_heading level0 row79" >79</th>
+      <td id="T_2d07f_row79_col0" class="data row79 col0" >2024</td>
+      <td id="T_2d07f_row79_col1" class="data row79 col1" >Wong Tai Sin</td>
+      <td id="T_2d07f_row79_col2" class="data row79 col2" >105.10</td>
+      <td id="T_2d07f_row79_col3" class="data row79 col3" >25.8%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row80" class="row_heading level0 row80" >80</th>
+      <td id="T_2d07f_row80_col0" class="data row80 col0" >2024</td>
+      <td id="T_2d07f_row80_col1" class="data row80 col1" >Kwun Tong</td>
+      <td id="T_2d07f_row80_col2" class="data row80 col2" >159.60</td>
+      <td id="T_2d07f_row80_col3" class="data row80 col3" >24.1%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row81" class="row_heading level0 row81" >81</th>
+      <td id="T_2d07f_row81_col0" class="data row81 col0" >2024</td>
+      <td id="T_2d07f_row81_col1" class="data row81 col1" >Kwai Tsing</td>
+      <td id="T_2d07f_row81_col2" class="data row81 col2" >120.00</td>
+      <td id="T_2d07f_row81_col3" class="data row81 col3" >24.4%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row82" class="row_heading level0 row82" >82</th>
+      <td id="T_2d07f_row82_col0" class="data row82 col0" >2024</td>
+      <td id="T_2d07f_row82_col1" class="data row82 col1" >Tsuen Wan</td>
+      <td id="T_2d07f_row82_col2" class="data row82 col2" >65.80</td>
+      <td id="T_2d07f_row82_col3" class="data row82 col3" >21.5%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row83" class="row_heading level0 row83" >83</th>
+      <td id="T_2d07f_row83_col0" class="data row83 col0" >2024</td>
+      <td id="T_2d07f_row83_col1" class="data row83 col1" >Tuen Mun</td>
+      <td id="T_2d07f_row83_col2" class="data row83 col2" >118.00</td>
+      <td id="T_2d07f_row83_col3" class="data row83 col3" >22.2%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row84" class="row_heading level0 row84" >84</th>
+      <td id="T_2d07f_row84_col0" class="data row84 col0" >2024</td>
+      <td id="T_2d07f_row84_col1" class="data row84 col1" >Yuen Long</td>
+      <td id="T_2d07f_row84_col2" class="data row84 col2" >125.10</td>
+      <td id="T_2d07f_row84_col3" class="data row84 col3" >18.6%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row85" class="row_heading level0 row85" >85</th>
+      <td id="T_2d07f_row85_col0" class="data row85 col0" >2024</td>
+      <td id="T_2d07f_row85_col1" class="data row85 col1" >North</td>
+      <td id="T_2d07f_row85_col2" class="data row85 col2" >71.70</td>
+      <td id="T_2d07f_row85_col3" class="data row85 col3" >21.2%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row86" class="row_heading level0 row86" >86</th>
+      <td id="T_2d07f_row86_col0" class="data row86 col0" >2024</td>
+      <td id="T_2d07f_row86_col1" class="data row86 col1" >Tai Po</td>
+      <td id="T_2d07f_row86_col2" class="data row86 col2" >74.50</td>
+      <td id="T_2d07f_row86_col3" class="data row86 col3" >22.7%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row87" class="row_heading level0 row87" >87</th>
+      <td id="T_2d07f_row87_col0" class="data row87 col0" >2024</td>
+      <td id="T_2d07f_row87_col1" class="data row87 col1" >Sha Tin</td>
+      <td id="T_2d07f_row87_col2" class="data row87 col2" >161.20</td>
+      <td id="T_2d07f_row87_col3" class="data row87 col3" >23.1%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row88" class="row_heading level0 row88" >88</th>
+      <td id="T_2d07f_row88_col0" class="data row88 col0" >2024</td>
+      <td id="T_2d07f_row88_col1" class="data row88 col1" >Sai Kung</td>
+      <td id="T_2d07f_row88_col2" class="data row88 col2" >93.90</td>
+      <td id="T_2d07f_row88_col3" class="data row88 col3" >18.8%</td>
+    </tr>
+    <tr>
+      <th id="T_2d07f_level0_row89" class="row_heading level0 row89" >89</th>
+      <td id="T_2d07f_row89_col0" class="data row89 col0" >2024</td>
+      <td id="T_2d07f_row89_col1" class="data row89 col1" >Islands</td>
+      <td id="T_2d07f_row89_col2" class="data row89 col2" >33.40</td>
+      <td id="T_2d07f_row89_col3" class="data row89 col3" >17.1%</td>
+    </tr>
+  </tbody>
+</table>
+
+        <div class="footer">
+            Generated on 2025-07-22 06:34 | 
+            Data Source: Elder Normalization Dataset
+        </div>
+    </div>
+</body>
+</html>

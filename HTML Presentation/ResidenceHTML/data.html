@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Data Sources Summary</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .slide {
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 16px;
+        }
+
+        thead tr {
+            border-bottom: 2px solid black;
+        }
+
+        thead th {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tbody tr:not(:last-child) {
+            border-bottom: 1px solid #ccc;
+        }
+
+        tbody td {
+            padding: 8px;
+            vertical-align: top;
+        }
+
+        tfoot tr {
+            border-top: 2px solid black;
+        }
+
+        a {
+            word-break: break-word;
+            color: #3366cc;
+            text-decoration: none;
+        }
+
+        .tables-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 30px;
+            padding: 40px;
+        }
+
+        .table-block {
+            width: 48%;
+        }
+
+        .vertical-divider {
+            width: 2px;
+            background-color: black;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slide">
+        <h2>Summary of Data Sources Used in This Research</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Dataset Name</th>
+                    <th>Year / Period</th>
+                    <th>Description</th>
+                    <th>Source Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Median Household Income</td>
+                    <td>2020–2024</td>
+                    <td>Socioeconomic status by district</td>
+                    <td><a href="https://data.gov.hk/sc-data/dataset/hk-censtatd-tablechart-130-06806">Link</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Elderly Population (%)</td>
+                    <td>2020–2024</td>
+                    <td>Elderly ratio by district</td>
+                    <td><a href="https://data.gov.hk/sc-data/dataset/hk-censtatd-tablechart-110-06811">Link</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Population Density</td>
+                    <td>2022</td>
+                    <td>Population density and area by district</td>
+                    <td><a
+                            href="https://data.gov.hk/sc-data/dataset/hk-censtatd-census_geo-table110-02001-csdi/resource/12c8f87c-41e8-40b1-88dc-0bc2ba264321">Link</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Bus Stop Locations</td>
+                    <td>N/A</td>
+                    <td>Bus network construction</td>
+                    <td><a href="https://data.gov.hk/en-data/dataset/hk-td-tis_23-routes-fares-geojson">Link</a></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Road Network (CSV)</td>
+                    <td>N/A</td>
+                    <td>For proximity and routing analysis</td>
+                    <td>Internal / Provided</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>MTR Station and Routes</td>
+                    <td>N/A</td>
+                    <td>MTR graph nodes and edges</td>
+                    <td>Internal / Provided</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>
