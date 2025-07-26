@@ -17,6 +17,22 @@
 
 This project demonstrates a comprehensive application of knowledge and methodologies learned in course **GE2324**, utilizing Hong Kong's public transport system as a case study. We systematically apply key course concepts including data preprocessing, clustering analysis, network centrality measures, correlation analysis, and recommendation systems to investigate spatial patterns in Hong Kong's transport network.
 
+## 📁 Repository Structure
+
+```
+├── Code/
+│   ├── transport net/                   # transport network modeling
+│   ├── association and frequency.ipynb  # frequent items analysis
+│   └── clustering code.py               # Clustering and Correlation
+├── Dataset/
+│   └── Dataset Links.txt        # Dataset saved on Google Drive
+├── HTML Presentation/           # used for presentation
+├── README.md
+├── Report.pdf                   # Final Project Report
+└── Slides                       # Screenshot of the HTML presentation slides
+
+```
+
 ### 🎯 Objectives
 
 - Apply theoretical concepts from GE2324 to real-world transportation data
@@ -113,22 +129,6 @@ Freq_ij = c_ij / |B|
 - Higher centrality measures in western Hong Kong Island and western Kowloon
 - Key transport hubs identified near Victoria Harbor tunnels
 
-
-## 📁 Repository Structure
-
-```
-├── Code/
-│   ├── transport net/                   # transport network modeling
-│   ├── association and frequency.ipynb  # frequent items analysis
-│   └── clustering code.py               # Clustering and Correlation
-├── Dataset/
-│   └── Dataset Links.txt        # Dataset saved on Google Drive
-├── HTML Presentation/           # used for presentation
-├── README.md
-├── Report.pdf                   # Final Project Report
-└── Slides                       # Screenshot of the HTML presentation slides
-
-```
 
 ## 📚 Course Integration
 
