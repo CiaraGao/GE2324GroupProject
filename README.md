@@ -1,6 +1,6 @@
 # GE2324 Group Project: Spatial Inequities in Public Transport in Hong Kong
 
-![SVG Banner](HTML Presentation/svg/flow.svg)
+![SVG Banner]([HTML Presentation/svg/flow.svg](https://github.com/CiaraGao/GE2324GroupProject/blob/main/HTML%20Presentation/svg/flow.svg))
 **Course**: GE2324 – The Art and Science of Data
 **Group**: T04-I  
 **Semester**: 2025 Summer
