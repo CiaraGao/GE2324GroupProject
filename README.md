@@ -111,54 +111,32 @@ Freq_ij = c_ij / |B|
 - Higher centrality measures in western Hong Kong Island and western Kowloon
 - Key transport hubs identified near Victoria Harbor tunnels
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn geopandas networkx
-```
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/CiaraGao/GE2324GroupProject.git
-cd GE2324GroupProject
-```
-
-2. Install required packages:
-```bash
-pip install -r requirements.txt
-```
-
-3. Run the analysis:
-```bash
-python main_analysis.py
-```
 
 ## 📁 Repository Structure
 
 ```
-├── data/
-│   ├── raw/                    # Raw datasets
-│   ├── processed/              # Cleaned and processed data
-│   └── frequency_cleaned.csv   # Station frequency data
-├── src/
-│   ├── preprocessing.py        # Data cleaning and preprocessing
-│   ├── clustering.py           # K-means clustering analysis
-│   ├── network_analysis.py     # Centrality measures computation
-│   ├── correlation.py          # Statistical correlation analysis
-│   └── similarity.py           # District similarity analysis
-├── results/
-│   ├── figures/               # Generated plots and visualizations
-│   └── tables/                # Analysis results tables
-├── docs/
-│   ├── main(2).tex           # LaTeX report source
-│   └── reference.bib         # Bibliography
+├── Code/
+│   ├── transport net/                   # transport network modeling
+│   ├── association and frequency.ipynb  # frequent items analysis
+│   └── clustering code.py               # Clustering and Correlation
+├── Dataset/
+│   └── Dataset Links.txt        # Dataset saved on Google Drive
+├── HTML Presentation/           # used for presentation
 ├── README.md
-└── requirements.txt
+├── Report.pdf                   # Final Project Report
+└── Slides                       # Screenshot of the HTML presentation slides
+
 ```
+
+## 📚 Course Integration
+
+This project serves as a comprehensive synthesis of **GE2324** course materials, demonstrating:
+
+- Practical application of theoretical concepts
+- Integration of multiple analytical methodologies
+- Real-world dataset handling and preprocessing
+- Statistical analysis and interpretation
+- Network analysis and graph theory applications
 
 ## 📈 Visualizations
 
@@ -186,28 +164,21 @@ Potential areas for extending this analytical framework:
 - Community detection algorithms for network analysis
 - Multi-dimensional similarity measures and dimensionality reduction
 - Regression analysis and hypothesis testing integration
-
-## 📚 Course Integration
-
-This project serves as a comprehensive synthesis of **GE2324** course materials, demonstrating:
-
-- Practical application of theoretical concepts
-- Integration of multiple analytical methodologies
-- Real-world dataset handling and preprocessing
-- Statistical analysis and interpretation
-- Network analysis and graph theory applications
+  
 
 ## 🙏 Acknowledgments
 
 - Hong Kong Government's data.gov.hk portal for providing access to datasets
 - Course GE2324 instructors and teaching assistants
-- Peer reviewers for valuable feedback
+- Peer reviewers during presentation for valuable feedback
 
 ## 📄 License
 
 This project is part of academic coursework for GE2324. Please cite appropriately if using any components of this analysis.
 
 ## 📞 Contact
+
+qimiaogao2-c@my.cityu.edu.hk
 
 For questions or collaboration opportunities, please contact the team members or open an issue in this repository.
 
